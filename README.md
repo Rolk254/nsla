@@ -28,4 +28,4 @@ Las contribuciones a este repositorio están limitadas a los empleados internos 
 
 ## Licencia
 
-El contenido y el código fuente de este repositorio están protegidos por una [Licencia Cerrada](LICENSE), lo que significa que no está permitida la reproducción, distribución o modificación sin autorización expresa. Consulta el archivo de licencia para obtener más detalles.
+El contenido y el código fuente de este repositorio están protegidos por una Licencia Cerrada, lo que significa que no está permitida la reproducción, distribución o modificación sin autorización expresa. Consulta el archivo de licencia para obtener más detalles.
