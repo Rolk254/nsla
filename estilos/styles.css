@@ -1,19 +1,26 @@
 body{
-    background-color: white;
+background-image:url(../imagenes/otras/fondo.png);
 }
 .container{
     display: flex;
     color: #ffffff;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,58,116,1) 69%, rgba(0,212,255,1) 100%);
     border-radius: 20px;
-    justify-content:flex-start;
-    align-items: center;
+    margin: left;
 }
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 .logo{
     width: 100%;
     margin-left: 20%;
 }
 .navbar {
+    display: flex;
+    justify-content:flex-end;
+    margin-right: 4%;
     font-size: 100%;
     margin-left: 15%;
 }
@@ -47,7 +54,14 @@ body{
 .pie-fotonoti {
 text-align: center;
 font-style: arial;
-color: #555555;
+color: white;
+border: 1px solid black;
+border-radius: 20px;
+}
+.pie-fotonoti h1{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 200%;
 }
 
 .fotonoti{
@@ -70,28 +84,276 @@ color: #555555;
     border: 1px solid black;
     border-radius: 20px;
     display: flex;
+    margin-top: 0px;
     flex-direction: column;
     padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 90%;
+    text-align: center;
+  }
+  .carcow{
+    background: linear-gradient(135deg, rgba(255,0,0,1) 0%, rgba(36,0,154,0.6559873949579832) 100%);
+  }
+  .raiste{
+    background: linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+}
+  .benram{
+    background: linear-gradient(135deg, rgba(255,98,0,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  .chibea{
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
+  }
+  .cowcar{
+    background: linear-gradient(135deg, rgba(36,0,154,0.6559873949579832) 0%, rgba(255,0,0,1) 100%);
+  }
+  .sterai{
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
   }
   
   .fechahora {
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 20px;
   }
   
   .equipos {
     display: flex;
-  }
-  
+    justify-content: space-between;
+  }  
   .ver-mas {
-    text-align: right;
+    text-align: center;
   }
-  
-  .ver-mas a {
-    color: blue;
+  .vermas{
+    background-color: #0074cc; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 4px 10px; /* Espaciado interno */
+    text-align: center;
     text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+  } 
+  .vermas:hover{
+    background-color: darkblue;
   }
-  
-  .ver-mas a:hover {
-    text-decoration: underline;
+  .iniciopar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
+  .galeria{
+    padding: 16px;
+  }
+  .lista-proxpar .proxpar{
+    object-fit: cover;
+    width: 300px;
+    height: 115px;
+    margin-right: 10px;
+    display: block;
+    margin-top: 10px;
+  }
+  .lista-proxpar{
+    display: flex;
+    overflow-y: auto;
+  }
+
+  #toggle {
+    display: none;
+}
+
+.togglearea {
+    color: #cb0d59;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.togglearea label {
+    background-color: rgba(0,58,116,1);
+    height: 45px;
+    width: 45px;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.togglearea label span {
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    width: 70%;
+    margin: 2px 0px;
+    border-radius: 20px;
+}
+
+.togglearea {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        display: none;
+    }
+
+    #toggle:checked+.navbar {
+        display: flex;
+    }
+
+    .togglearea {
+        display: flex;
+    }
+}
+@media screen and (max-width: 1200px) { 
+    .navbar {
+        flex-direction: column;
+        display: none;
+    }
+
+    #toggle:checked+.navbar {
+        display: flex;
+    }
+
+    .togglearea {
+        display: flex;
+    }
+    .lista-proxpar {
+        flex-wrap: wrap;
+      }
+      .lista-proxpar .proxpar {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: flex;
+      }
+}
+@media screen and (max-width: 470px) {
+    .navbar a{
+        margin-right: 25%
+    }
+}
+.logito{
+    width: 30px;
+    height: 30px;
+}
+.vs{
+width: 16%;
+}
+.lideres{
+  text-align: center;
+}
+.podium{
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  margin-bottom: 2%;
+}
+.podio {
+  display: flex;
+}
+
+.puesto {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+  margin: 0 20px;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.primero {
+  background-image: url(../imagenes/otras/oro.jpg);
+  transform: translateY(-60px); 
+  order: 2;
+}
+
+.segundo {
+  background-image: url(../imagenes/otras/plata.jpg);
+  transform: translateY(-20px);
+  order: 1;
+}
+.tercero {
+ background-image: url(../imagenes/otras/bronce.jpg);
+  order: 3;
+}
+
+.imagen {
+  width: 80%;
+  height: 70%;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pie-foto {
+  margin-top: 10px;
+  font-weight: bold;
+  color: black;
+}
+.pie-foto2{
+  text-align: center;
+  color: white;
+  font-size: 90%;
+}
+
+@media screen and (max-width: 768px) {
+  .podio {
+    flex-direction: column;
+  }
+
+  .primero {
+    order: 1;
+  }
+
+  .segundo {
+    order: 2;
+  }
+
+  .tercero {
+    order: 3;
+  }
+}
+.footer {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,58,116,1) 69%, rgba(0,212,255,1) 100%);
+  padding: 1px 30px 1px 1px;
+  color: #2f2f2f;
+  color: white;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 20px;
+}
+.divfoot{
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+li p{
+  font-size: 70%;
+}
+li a{
+  text-decoration: none;
+  color: white;
+}
+.terms{
+  justify-content: space-between;
+  display: flex;
+}
