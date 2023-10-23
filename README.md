@@ -6,7 +6,13 @@ Este repositorio contiene el código fuente y los archivos necesarios para crear
 ### Pagina inicio
 Consta de dos secciones principales de noticias de última hora.  
 Seis etiquetas mostrando los próximos juegos.  
-Podio de los 3 mejores jugadores  
+Podio de los 3 mejores jugadores.    
+### Pagina Calendario
+Elegir la jornada  
+Los partidos de ese día aparecen con la hora, la fecha y el enlace para comprar boletos.  
+### Classificacion
+Esta página muestra una tabla con el orden de los equipos, el número de partidos jugados, los puntos y toda la información sobre la clasificación.
+### Equipos
 
 ## Contribuciones
 
