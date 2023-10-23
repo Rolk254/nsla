@@ -4,7 +4,7 @@ Este repositorio contiene el código fuente y los archivos necesarios para crear
 
 ## Características Principales
 ### Pagina inicio
-Consta de dos secciones principales de noticias de última hora.  
+* Consta de dos secciones principales de noticias de última hora.  
 Seis etiquetas mostrando los próximos juegos.  
 Podio de los 3 mejores jugadores.    
 ### Pagina Calendario
