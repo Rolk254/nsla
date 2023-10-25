@@ -712,7 +712,7 @@ details[open] .toggle-summary .toggle-button {
   width: 100%;
   position: relative;
 }
-.grid-noticia img:hover {
+.grid-noticia:hover {
   -webkit-transform:scale(1.1);transform:scale(1.1);
   transition-duration: 1s;
 }
