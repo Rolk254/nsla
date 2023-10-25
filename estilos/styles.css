@@ -30,21 +30,6 @@ header{
 .left-section img{
   margin-left: 20%
 }
-.efecto:hover{
-  animation: bounceAndRotate 2s infinite alternate;
-  transform-origin: center;
-}
-@keyframes bounceAndRotate {
-  0% {
-    transform: translateY(0) rotateY(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotateY(180deg);
-  }
-  100% {
-    transform: translateY(0) rotateY(360deg);
-  }
-}
 /*Barra de navegacion*/
 .navbar {
     display: flex;
