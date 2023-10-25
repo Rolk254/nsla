@@ -24,13 +24,26 @@ header{
 .left-section {
     display: flex;
     align-items: center;
-    margin-right: auto;
+    margin-right: auto;  
+    perspective: 1000px;
 }
 .left-section img{
   margin-left: 20%
 }
 .efecto:hover{
-  transform: translateY(-10px) rotate(10deg);
+  animation: bounceRotate 2s infinite alternate;
+  transform-origin: center;
+}
+@keyframes bounceRotate {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(360deg);
+  }
 }
 /*Barra de navegacion*/
 .navbar {
