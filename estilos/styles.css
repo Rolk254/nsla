@@ -31,18 +31,18 @@ header{
   margin-left: 20%
 }
 .efecto:hover{
-  animation: bounceRotate 2s infinite alternate;
+  animation: bounceAndRotate 2s infinite alternate;
   transform-origin: center;
 }
-@keyframes bounceRotate {
+@keyframes bounceAndRotate {
   0% {
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px) rotate(360deg);
+    transform: translateY(-10px) rotate(180deg);
   }
   100% {
-    transform: translateY(0) rotate(720deg);
+    transform: translateY(0) rotate(360deg);
   }
 }
 /*Barra de navegacion*/
