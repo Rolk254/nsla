@@ -36,13 +36,13 @@ header{
 }
 @keyframes bounceRotate {
   0% {
-    transform: translateY(0) rotateY(0deg);
+    transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-10px) rotateY(180deg);
+    transform: translateY(-10px) rotate(360deg);
   }
   100% {
-    transform: translateY(0) rotateY(360deg);
+    transform: translateY(0) rotate(720deg);
   }
 }
 /*Barra de navegacion*/
