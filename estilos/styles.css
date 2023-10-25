@@ -715,7 +715,6 @@ details[open] .toggle-summary .toggle-button {
 .grid-noticia:hover {
   -webkit-transform:scale(1.1);transform:scale(1.1);
   transition-duration: 1s;
-  position: absolute;
 }
 
 .grid-noticia img {
@@ -723,7 +722,6 @@ details[open] .toggle-summary .toggle-button {
   height: auto;
   border-radius: 6px;
 }
-
 .pie {
   bottom: 0;
   left: 0;
