@@ -29,6 +29,9 @@ header{
 .left-section img{
   margin-left: 20%
 }
+.left-section:hover{
+  transform: translateY(-10px) rotate(10deg);
+}
 /*Barra de navegacion*/
 .navbar {
     display: flex;
