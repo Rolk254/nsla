@@ -715,6 +715,7 @@ details[open] .toggle-summary .toggle-button {
 .grid-noticia:hover {
   -webkit-transform:scale(1.1);transform:scale(1.1);
   transition-duration: 1s;
+  z-index: 1;
 }
 
 .grid-noticia img {
