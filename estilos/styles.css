@@ -166,6 +166,8 @@ header{
 }
 .columna{
   flex-direction: column;
+}
+.columna a{
   text-decoration: none;
 }
 /*Proximos 6 partidos*/
