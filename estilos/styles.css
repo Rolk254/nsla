@@ -29,7 +29,7 @@ header{
 .left-section img{
   margin-left: 20%
 }
-.left-section:hover{
+.efecto:hover{
   transform: translateY(-10px) rotate(10deg);
 }
 /*Barra de navegacion*/
