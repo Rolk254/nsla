@@ -750,3 +750,6 @@ details[open] .toggle-summary .toggle-button {
 .videonoti2{
   width: 70%;
 }
+.rotar{
+  animation: flip_left 7.6s steps(60,start) infinite forwards;
+}
