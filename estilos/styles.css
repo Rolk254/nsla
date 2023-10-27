@@ -446,13 +446,13 @@ header{
   font-size: 24px;
   cursor: pointer;
 }
-
 .space{
   display: flex;
   cursor: pointer;
   justify-content: space-around;
   margin: 10px;
 }
+
 @media screen and (max-width: 800px) {
 .space{
   justify-content:flex-start;
@@ -470,7 +470,6 @@ label h3{
   align-items: flex-start;
   margin: 20px;
 }
-
 .tabla-estadisticas {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -479,7 +478,6 @@ label h3{
   width: 60%; /* La tabla izquierda ocupa el 60% del espacio */
   padding: 20px;
 }
-
 .tabla-estadisticas-half {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -497,21 +495,17 @@ label h3{
   align-items: center;
   margin-bottom: 20px;
 }
-
 .equipo, .fecha-hora {
   text-align: center;
 }
-
 .equipo h2 {
   margin: 0;
   font-size: 20px;
 }
-
 .tabla-estadisticas table {
   width: 100%;
   border-collapse: collapse;
 }
-
 .tabla-estadisticas th, td {
   padding: 8px;
   text-align: center;
@@ -633,6 +627,7 @@ form{
   max-width: 420px;
   margin: 10px auto;
 }
+/*Estilos para las noticias individuales*/
 .espacio {
   display: flex;
   text-align: center;
@@ -655,6 +650,7 @@ form{
 .pienoticia1 ul {
   list-style: none;
 }
+/*Estilos para la lista de personas dentro del equipo*/
 details {
   border: 1px solid #ddd;
   margin: 10px;
@@ -701,7 +697,7 @@ details[open] .toggle-summary .toggle-button {
 .fotoequipos {
   width: 50px;
 }
-/**/
+/*Estilos pagina noticias*/
 .grid-noticias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
