@@ -411,9 +411,16 @@
     </footer>
   </body>
   <script>
-    document.querySelector('ul').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Lo sentimos, estas jornadas aun no estan implementadas');
-    });
+    // Obtén todos los elementos de la clase 'jornadas'
+    var jornadasLinks = document.querySelectorAll('.jornadas a');
+  
+    // Agrega un evento click solo a los enlaces de la jornada 3 hasta la jornada 10
+    for (var i = 2; i < 10; i++) {
+      jornadasLinks[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Lo sentimos, estas jornadas aún no están implementadas');
+      });
+    }
   </script>
+  
 </html>
