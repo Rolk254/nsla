@@ -37,7 +37,7 @@
       <ul class="jornadas">
         <li><a id="active" href="calendario.html">J1</a></li>
         <li><a href="jornada2.html">J2</a></li>
-        <li><a href="#">J3</a></li>
+        <li><a type="submit" href="#">J3</a></li>
         <li><a href="#">J4</a></li>
         <li><a href="#">J5</a></li>
         <li><a href="#">J6</a></li>
@@ -410,4 +410,12 @@
       </div>
     </footer>
   </body>
+  <script>
+    document.querySelector('ul').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nombre = document.querySelector('ul li[name="nombre"]').value;
+      alert('Lo sentimos, estas jornadas aun no estan implementadas');
+      document.querySelector('ul').reset();
+    });
+      </script>
 </html>
