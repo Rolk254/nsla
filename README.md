@@ -22,7 +22,7 @@ Este repositorio contiene el código fuente y los archivos necesarios para crear
 ### Noticias
 * Esta página muestra todas las ultimas noticias de le NSLA los equipos, jugadores i todo.  
 
-### Conacto
+### Contacto
 * En la página de "Contáctanos", encontrarás espacios donde puedes ingresar tu nombre, tu dirección de correo electrónico i tu mensaje. Estos campos te permiten enviar un mensaje o consulta al equipo de la página.
 
 ## Contribuciones
