@@ -112,7 +112,9 @@ header{
     #toggle:checked+.navbar {
         display: flex;
     }
-
+    .galeria{
+      text-align: center;
+    }
     .togglearea {
         display: flex;
     }
