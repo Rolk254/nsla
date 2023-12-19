@@ -113,9 +113,7 @@ header{
         display: flex;
     }
     .galeria{
-      text-align: center;
       justify-content: center;
-      align-items: center;
     }
     .togglearea {
         display: flex;
