@@ -103,6 +103,12 @@ header{
     }
 
 }
+@media screen and (max-width: 1045) { 
+  .galeria{
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 1200px) { 
     .navbar {
         flex-direction: column;
@@ -111,9 +117,6 @@ header{
 
     #toggle:checked+.navbar {
         display: flex;
-    }
-    .galeria{
-      justify-content: center;
     }
     .togglearea {
         display: flex;
