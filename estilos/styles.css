@@ -104,7 +104,7 @@ header{
 
 }
 @media screen and (max-width: 1045) { 
-  .galeria{
+  .lista-proxpar{
     justify-content: center;
   }
 }
