@@ -103,11 +103,6 @@ header{
     }
 
 }
-@media screen and (max-width: 1045) { 
-  .lista-proxpar{
-    justify-content: center;
-  }
-}
 
 @media screen and (max-width: 1200px) { 
     .navbar {
@@ -123,6 +118,7 @@ header{
     }
     .lista-proxpar {
         flex-wrap: wrap;
+        justify-content: center;
       }
     .lista-proxpar .proxpar {
       margin-right: 0;
