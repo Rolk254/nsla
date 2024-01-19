@@ -1,0 +1,154 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="equipos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="equipo" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> Repite la estructura para otros equipos según sea necesario </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombreequipo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nombre"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="entrenador">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="nombre"/>
+                    <xs:element type="xs:string" name="imagen"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="jugadores">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="LB">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element name="imagen">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="class" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="SAF">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element type="xs:string" name="imagen"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="WR">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element type="xs:string" name="imagen"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="CB">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element type="xs:string" name="imagen"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="QB" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element type="xs:string" name="imagen"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DT" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation> Agrega más jugadores según sea necesario  Agrega más jugadores según sea necesario </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jugador" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="nombre"/>
+                                <xs:element type="xs:string" name="imagen"/>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="posicion" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

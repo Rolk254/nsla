@@ -31,8 +31,8 @@
         <div class="navbar">
           <a id="active" href="index.html">Inicio</a>
           <a href="./paginas/calendario.html">Calendario</a>
-          <a href="./paginas/clasificacion.html">Clasificación</a>
-          <a href="./paginas/equipos.html">Equipos</a>
+          <a href="./xm_xs/clasi.xml">Clasificación</a>
+          <a href="./xm_xs/datos.xml">Equipos</a>
           <a href="./paginas/noticias.html">Noticias</a>
           <a href="./paginas/contacto.html">Contacto</a>
         </div>
@@ -41,7 +41,7 @@
     <article>
       <!-- Divs para las dos Noticias -->
       <div class="noticiasinicio">
-      <a style="text-decoration: none;" href="./paginas/noticia1.html">
+      <a class="textdecoration" href="./paginas/noticia1.html">
         <!-- Primera Noticia -->
         <div class="columna espaciado">
           <div class="foto">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </a>
-      <a style="text-decoration: none;" href="./paginas/noticia2.html">
+      <a class="textdecoration" href="./paginas/noticia2.html">
         <!-- Segunda Noticia -->
         <div class="columna">
           <div class="foto">
@@ -192,12 +192,18 @@
       </div>
     </section>
     <!-- Botón para subir arriba de la Pag -->
-    <a href="#active" class="pasubir"><div class="botonup">⬆</div></a>
+    <a class="boton" href="#active"><button class="pasubir">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+        ></path>
+      </svg>
+    </button></a>
     <!-- Pie de pagina -->
     <footer class="footer">
       <div>
         <ul>
-          <li><img src="./imagenes/logos/nofondo.png" alt="" style="width: 50px;"></li>
+          <li><img src="./imagenes/logos/nofondo.png" alt="" class="logopie"></li>
           <li><p>© 2023 NSLA Enterprises LLC. NSLA and the NSLA shield design are registered trademarks of the National Football League.The team names, logos and uniform designs are registered trademarks of the teams indicated. All other NSLA-related trademarks are trademarks of the National Football League. NSLA footage © NSLA Productions LLC.</p></li>
           <li class="terms">
             <a href="./paginas/privacidad.html">Política de Privacidad</a>
