@@ -124,9 +124,9 @@
           </xsl:when>
         </xsl:choose>
         <img>
-          <xsl:attribute name="src">
-  <xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/>
-</xsl:attribute>
+         <xsl:attribute name="src">
+            <xsl:value-of select="concat('/nsla/imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/>
+        </xsl:attribute>
           <xsl:attribute name="alt">Logo</xsl:attribute>
           <xsl:attribute name="width">30px</xsl:attribute>
         </img>
