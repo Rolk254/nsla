@@ -923,3 +923,6 @@ select::-ms-expand {
 .lineheight{
   line-height: 150%;
 }
+.uppercase{
+  text-transform: uppercase;
+}
