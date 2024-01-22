@@ -99,7 +99,7 @@
       <td class="columnatabla">
         <xsl:choose>
           <xsl:when test="translate(nombre, ' ', '') = 'Cardinals'">
-            <xsl:attribute name="class"><div class="uppercase">c</div>ardinals</xsl:attribute>
+            <xsl:attribute name="class">cardinals</xsl:attribute>
           </xsl:when>
           <xsl:when test="translate(nombre, ' ', '') = 'Cowboys'">
             <xsl:attribute name="class">cowboys</xsl:attribute>
