@@ -35,11 +35,11 @@
           <input type="checkbox" id="toggle"/>
           <div class="navbar">
             <a href="../index.html">Inicio</a>
-            <a href="../paginas/calendario.html">Calendario</a>
-            <a id="active" href="../xm_xs/clasi.xml">Clasificación</a>
-            <a href="../xm_xs/datos.xml">Equipos</a>
-            <a href="noticias.html">Noticias</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="calendar.xml">Calendario</a>
+            <a id="active" href="clasi.xml">Clasificación</a>
+            <a href="datos.xml">Equipos</a>
+            <a href="../paginas/noticias.html">Noticias</a>
+            <a href="../paginas/contacto.html">Contacto</a>
           </div>
         </header>
         <section>
@@ -52,18 +52,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="columnatabla">
-                  <th></th>
-                  <th title="Partidos Jugados">PJ</th>
-                  <th title="Victorias">V</th>
-                  <th title="Derrotas">D</th>
-                  <th title="Empates">E</th>
-                  <th title="Partidos Locales">LC</th>
-                  <th title="Partidos Visitantes">PS</th>
-                  <th title="Puntos Perdidos">PP</th>
-                  <th title="Puntos Concedidos">PC</th>
-                </tr>
-                <xsl:apply-templates select="equipo"/>
+                <xsl:apply-templates select="equipo">
+                  <xsl:sort select="victorias" order="descending" data-type="number"/>
+                </xsl:apply-templates>
               </tbody>
             </table>
           </div>

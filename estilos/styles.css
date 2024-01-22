@@ -4,15 +4,12 @@ html{
 /*Fondo de la pagina*/
 body{
 background-image:url(../imagenes/otras/fondo.png);
+font-family: Arial, Helvetica, sans-serif;
 }
 #active{
   background-color: white;
   border-radius: 20px;
   color: #cb0d59;
-}
-.publi{
-background-image:url(../imagenes/otras/publifondo.png);
-background-position: 23%;
 }
 /*Cabecera*/
 header{
@@ -131,12 +128,6 @@ header{
     margin-bottom: 10px;
     display: flex;
   }
-  .videonoti{
-    width: 50%;
-  }
-  .videonoti2{
-    width: 35%;
-  }
   .boton{
     display: none;
   }
@@ -158,6 +149,9 @@ header{
 @media screen and (max-width: 550px) {
   label h3{
     margin-right: 5%;
+  }
+  .footer ul {
+    margin-right: 10%;
   }
 }
 /*Noticias, Foto noticia + pie de foto*/
@@ -193,6 +187,109 @@ header{
 }
 .columna{
   flex-direction: column;
+}
+/*Noticia Uno y Dos*/
+@media screen and (max-width: 578px) {
+  .noticia img,
+  .noticia video{
+    width: 100% !important;
+  }
+
+  .fondo-noticia{
+    display: none;
+  }
+  .contenedor-noticia{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100% !important;
+    text-align: center !important;
+    background-color: white !important;
+  }
+  .contenedor-publicidad1{
+    display: none !important;
+  }
+  .contenedor-publicidad2{
+    display: none !important;
+  }
+
+}
+.noticia {
+  text-align: center;
+  padding-bottom: 1vh;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.noticia img,
+.noticia video {
+  width: 50%;
+  display: block;
+  margin: 0 auto; /* Esto reemplaza margin-left: auto y margin-right: auto */
+}
+
+.noticia p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: large;
+}
+
+.noticia h2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: xx-large;
+}
+
+.fondo-noticia{
+  border-radius: 20px;
+  display: flex;
+  columns: 3;
+}
+
+.contenedor-publicidad1{
+  width: 10%;
+  background-image: url(../imagenes/otras/publifondo.png);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenedor-publicidad2{
+  width: 10%;
+  background-image: url(../imagenes/otras/publifondo2.png);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contenedor-publicidad-principal{
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #003973;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-top: 0.6%;
+}
+
+.contenedor-pie-de-publicidad{
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #003973;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.contenedor-noticia{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 80%;
+  background-color: white;
 }
 /*Proximos 6 partidos*/
 .proxpar {
@@ -263,10 +360,6 @@ header{
 }
 .lista-proxpar{
   display: flex;
-}
-.logito{
-  width: 30px;
-  height: 30px;
 }
 /*Jugadores lideres, Podio*/
 .lideres{
@@ -365,7 +458,7 @@ header{
 }
 .footer ul {
   list-style: none;
-  margin-right: 2%;
+  margin-right: 3%;
 }
 .footer li p{
   font-size: 70%;
@@ -427,63 +520,6 @@ header{
   display: flex;
   justify-content: space-between;
 }
-/*Popup para ver info del partido en cuestion*/
-.popup {
-  display: flex;
-  transform: scale(0);
-  position: fixed;
-  top: 0;
-  left: 0; 
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
-}
-.popup-button {
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-}
-.popup-toggle {
-  display: none;
-}
-.popup-toggle:checked + .popup {
-  transform: scale(1);
-  transition: 1s;
-}
-.popup-content {
-  background-color: #fff;
-  width: 650px;
-  height: 460px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  pointer-events: auto;
-}
-.popup-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-.space{
-  display: flex;
-  cursor: pointer;
-  justify-content: space-around;
-  margin: 10px;
-}
 
 @media screen and (max-width: 730px) {
 .space{
@@ -496,56 +532,11 @@ label h3{
   margin-top: 100px;
 }
 }
-.contenedor {
+.space{
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px;
-}
-.tabla-estadisticas {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 60%; /* La tabla izquierda ocupa el 60% del espacio */
-  padding: 20px;
-}
-.tabla-estadisticas-half {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 30%; /* La tabla derecha ocupa el 30% del espacio */
-  padding: 20px;
-}
-.tabla-estadisticas-half table{
-  justify-content: left;
-}
-.cabecera {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.equipo, .fecha-hora {
-  text-align: center;
-}
-.equipo h2 {
-  margin: 0;
-  font-size: 20px;
-}
-.tabla-estadisticas table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.tabla-estadisticas th, td {
-  padding: 8px;
-  text-align: center;
-}
-
-.tabla-estadisticas th {
-  background-color: #333;
-  color: #fff;
+  cursor: pointer;
+  justify-content: space-around;
+  margin: 10px;
 }
 /*Tabla clasificación*/
 .divtabla {
@@ -653,19 +644,6 @@ textarea{
 form{
   max-width: 420px;
   margin: 10px auto;
-}
-
-/*Estilos para las noticias 1 y 2 */
-
-.ContenedorImg {
-  text-align: center;
-
-}
-
-.PublicidadImg {
-  display: flow-root;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*Estilos para la lista de personas dentro del equipo*/
@@ -788,11 +766,12 @@ details[open] .toggle-summary .toggle-button {
   color: white;
   background: linear-gradient(90deg, rgb(6, 0, 124) 0%, rgb(103, 170, 238) 69%, rgba(0,212,255,1) 100%);
 }
-.videonoti2{
-  width: 70%;
-}
 .logopie{
   width: 50px;
+}
+.logito{
+  width: 30px;
+  height: 30px;
 }
 .boton {
   position: fixed;
@@ -916,4 +895,28 @@ select::-ms-expand {
 }
 .uppercase{
   text-transform: uppercase;
+}
+.menu {
+margin-top: 5%;
+  position: fixed;
+  left: 0;
+  width: 150px;
+  background-color: #003973;
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+  border-bottom: 1px solid #555;
+}
+
+.menu a:hover {
+  background-color: #3f91e4;
+  border-radius: 16px;
 }
