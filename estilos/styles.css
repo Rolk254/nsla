@@ -657,9 +657,15 @@ form{
 
 /*Estilos para las noticias 1 y 2 */
 
-.NoticiaImg {
+.ContenedorImg {
   text-align: center;
+
+}
+
+.PublicidadImg {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Estilos para la lista de personas dentro del equipo*/
