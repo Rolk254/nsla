@@ -654,29 +654,7 @@ form{
   max-width: 420px;
   margin: 10px auto;
 }
-/*Estilos para las noticias individuales*/
-.espacio {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-.alinear{
-  text-align: center;
-  margin-top: 6px;
-}
-.pienoticia1 {
-  color: black;
-  border-radius: 20px; 
-  width: 50%; 
-  text-align: center; 
-  margin: 0 auto; 
-  top: 50%; 
-  left: 50%; 
-  font-size: 95%;
-}
-.pienoticia1 ul {
-  list-style: none;
-}
+
 /*Estilos para la lista de personas dentro del equipo*/
 details {
   border: 1px solid #ddd;
