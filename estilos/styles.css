@@ -659,6 +659,7 @@ form{
 
 .NoticiaImg {
   text-align: center;
+  display: block;
 }
 
 /*Estilos para la lista de personas dentro del equipo*/
