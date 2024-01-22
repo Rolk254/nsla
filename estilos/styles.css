@@ -655,6 +655,12 @@ form{
   margin: 10px auto;
 }
 
+/*Estilos para las noticias 1 y 2 */
+
+.NoticiaImg {
+  text-align: center;
+}
+
 /*Estilos para la lista de personas dentro del equipo*/
 details {
   border: 1px solid #ddd;
