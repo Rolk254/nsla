@@ -75,7 +75,7 @@
 </xsl:template>
 
 <xsl:template match="jornada">
-    <h1 id="jornada_{@num}" style="text-align:center;">Jornada <xsl:value-of select="@num"/></h1>
+    <h2 id="jornada_{@num}" style="text-align:center;">Jornada <xsl:value-of select="@num"/></h2>
     <div class="divpartidos">
         <xsl:apply-templates select="partido"/>
     </div>
