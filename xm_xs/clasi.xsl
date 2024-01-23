@@ -52,6 +52,17 @@
                 </tr>
               </thead>
               <tbody>
+                <tr class="columnatabla">
+                  <th></th>
+                  <th>PJ</th>
+                  <th>V</th>
+                  <th>D</th>
+                  <th>E</th>
+                  <th>Local</th>
+                  <th>Visitante</th>
+                  <th>PP</th>
+                  <th>PC</th>
+              </tr>
                 <xsl:apply-templates select="equipo">
                   <xsl:sort select="victorias" order="descending" data-type="number"/>
                 </xsl:apply-templates>
