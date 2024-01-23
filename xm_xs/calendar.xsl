@@ -36,9 +36,10 @@
         </header>
         <div class="select" >
             <select id="seleccionarPagina">
-                <option value="calendar_t1.xml">TEMPORADA 1</option>
-                <option value="calendar_t2.xml">TEMPORADA 2</option>
-                <option value="3">TEMPORADA 3</option>
+              <option value="">Selecciona una Temporada</option>
+              <option value="calendar_t1.xml">TEMPORADA 1</option>
+              <option value="calendar_t2.xml">TEMPORADA 2</option>
+              <option value="3">TEMPORADA 3</option>
             </select>
         </div>
         <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
