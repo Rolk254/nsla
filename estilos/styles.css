@@ -525,6 +525,7 @@ header{
 .space{
   justify-content:flex-start;
   display: flex;
+  cursor: pointer;
   justify-content: space-around;
   margin: 10px;
 }
@@ -534,6 +535,11 @@ label h3{
 .podium{
   margin-top: 100px;
 }
+}
+.space{
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
 }
 /*Tabla clasificación*/
 .divtabla {
