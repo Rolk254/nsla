@@ -339,10 +339,6 @@ header{
   border: 2px solid white;
   border-radius: 20px;
 }
-.select {
-  margin-right: 10px;
-}
-
 select {
   padding: 8px;
   font-size: 14px;
