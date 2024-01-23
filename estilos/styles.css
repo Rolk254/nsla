@@ -133,6 +133,7 @@ header{
   }
 
   .menu-despegable{
+    display: flex;
     background-color: #002749;
     border-radius: 50%;
     overflow: hidden;
