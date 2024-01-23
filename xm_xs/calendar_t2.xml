@@ -53,5 +53,56 @@
             </equipos>
         </partido>
     </jornada>
-    <!-- Resto de jornadas con fechas avanzadas y mismos equipos -->
+    <jornada num="3">
+        <partido>
+            <fecha>Martes, 13 de marzo</fecha>
+            <hora>16:30</hora>
+            <equipos>
+                <local>Cardinals</local>
+                <visitante>Cowboys</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Miércoles, 14 de marzo</fecha>
+            <hora>18:00</hora>
+            <equipos>
+                <local>Raiders</local>
+                <visitante>Rams</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Jueves, 15 de marzo</fecha>
+            <hora>20:00</hora>
+            <equipos>
+                <local>Bengals</local>
+                <visitante>Steelers</visitante>
+            </equipos>
+        </partido>
+    </jornada>
+    <jornada num="4">
+        <partido>
+            <fecha>Martes, 20 de marzo</fecha>
+            <hora>17:15</hora>
+            <equipos>
+                <local>Rams</local>
+                <visitante>Cardinals</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Miércoles, 21 de marzo</fecha>
+            <hora>18:45</hora>
+            <equipos>
+                <local>Cowboys</local>
+                <visitante>Raiders</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Jueves, 22 de marzo</fecha>
+            <hora>20:30</hora>
+            <equipos>
+                <local>Steelers</local>
+                <visitante>Bengals</visitante>
+            </equipos>
+        </partido>
+    </jornada>
 </temporada2>
