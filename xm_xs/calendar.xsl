@@ -40,8 +40,8 @@
                 <option value="calendar_t2.xml">TEMPORADA 2</option>
                 <option value="3">TEMPORADA 3</option>
             </select>
-            <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
         </div>
+        <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
         <div class="menu">
           <xsl:apply-templates select="//jornada" mode="menu"/>
       </div>
