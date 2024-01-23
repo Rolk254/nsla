@@ -17,6 +17,9 @@ function redirigir() {
             break;
     }
 
-    // Restablecer el valor del select para que el evento onchange se active nuevamente
-    document.getElementById("temporadaSelector").value = "0";  // Cambia "0" al valor predeterminado
+    // Agregar una demora antes de restablecer el valor del select
+    setTimeout(function() {
+        // Restablecer el valor del select para que el evento onchange se active nuevamente
+        document.getElementById("temporadaSelector").value = "0";  // Cambia "0" al valor predeterminado
+    }, 100); // Puedes ajustar el tiempo de demora según sea necesario
 }
