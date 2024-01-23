@@ -58,8 +58,8 @@
                   <th>V</th>
                   <th>D</th>
                   <th>E</th>
-                  <th>Local</th>
-                  <th>Visitante</th>
+                  <th>Lcl</th>
+                  <th>Vis</th>
                   <th>PP</th>
                   <th>PC</th>
               </tr>
