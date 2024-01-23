@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="calendar.xsl"?>
 <temporada1 xsi:noNamespaceSchemaLocation="calendar.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    Temporada 1
     <jornada num="1">
         <partido>
             <fecha>Viernes, 13 de octubre</fecha>
