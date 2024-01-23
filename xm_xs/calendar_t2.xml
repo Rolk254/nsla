@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="calendar.xsl"?>
+<temporada2 xsi:noNamespaceSchemaLocation="calendar.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jornada num="1">
+        <partido>
+            <fecha>Viernes, 2 de marzo</fecha>
+            <hora>20:15</hora>
+            <equipos>
+                <local>Cardinals</local>
+                <visitante>Rams</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Sábado, 3 de marzo</fecha>
+            <hora>21:45</hora>
+            <equipos>
+                <local>Raiders</local>
+                <visitante>Cowboys</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Domingo, 4 de marzo</fecha>
+            <hora>23:30</hora>
+            <equipos>
+                <local>Bengals</local>
+                <visitante>Steelers</visitante>
+            </equipos>
+        </partido>
+    </jornada>
+    <jornada num="2">
+        <partido>
+            <fecha>Viernes, 9 de marzo</fecha>
+            <hora>19:15</hora>
+            <equipos>
+                <local>Rams</local>
+                <visitante>Cardinals</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Sábado, 10 de marzo</fecha>
+            <hora>21:00</hora>
+            <equipos>
+                <local>Cowboys</local>
+                <visitante>Raiders</visitante>
+            </equipos>
+        </partido>
+        <partido>
+            <fecha>Domingo, 11 de marzo</fecha>
+            <hora>18:30</hora>
+            <equipos>
+                <local>Steelers</local>
+                <visitante>Bengals</visitante>
+            </equipos>
+        </partido>
+    </jornada>
+    <!-- Resto de jornadas con fechas avanzadas y mismos equipos -->
+</temporada2>
