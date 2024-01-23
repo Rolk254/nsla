@@ -45,7 +45,7 @@
           <xsl:apply-templates select="//jornada" mode="menu"/>
       </div>
       <div class="menu-despegable">
-      <img src="../imagenes/otras/flechamenudesplegable.png" alt=""/>
+        <img src="../imagenes/otras/publi.png" alt=""/>
     </div>
       <a class="boton" href="#active"><button class="pasubir">
         <svg class="svgIcon" viewBox="0 0 384 512">
