@@ -54,14 +54,14 @@
               <tbody>
                 <tr class="columnatabla">
                   <th></th>
-                  <th>PJ</th>
-                  <th>V</th>
-                  <th>D</th>
-                  <th>E</th>
-                  <th>Lcl</th>
-                  <th>Vis</th>
-                  <th>PP</th>
-                  <th>PC</th>
+                  <th title="Partidos Jugados">PJ</th>
+                  <th title="Victorias">V</th>
+                  <th title="Derrotas">D</th>
+                  <th title="Empates">E</th>
+                  <th title="Local">Ll</th>
+                  <th title="Visitante">Vs</th>
+                  <th title="Puntos Perdidos">PP</th>
+                  <th title="Puntos Conseguidos">PC</th>
               </tr>
                 <xsl:apply-templates select="equipo">
                   <xsl:sort select="victorias" order="descending" data-type="number"/>
