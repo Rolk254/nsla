@@ -842,11 +842,16 @@ details[open] .toggle-summary .toggle-button {
   bottom: unset;
   transition-duration: 0.3s;
 }
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
 /* Custom Select wrapper */
 .select {
   position: relative;
   display: flex;
-  width: 13em; /* Modificado para hacerlo más pequeño */
+  width: 10em; /* Modificado para hacerlo más pequeño */
   height: 2em; /* Modificado para hacerlo más pequeño */
   border-radius: .25em;
   overflow: hidden;
