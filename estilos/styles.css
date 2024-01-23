@@ -911,7 +911,7 @@ select::-ms-expand {
 /* Menu de jornadas */
 }
 .menu {
-  margin-top: 5%;
+margin-top: 5%;
   position: fixed;
   left: 0;
   width: 150px;
@@ -923,9 +923,7 @@ select::-ms-expand {
 }
 
 .menu a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   color: #fff;
   text-decoration: none;
   padding: 5px 0;
@@ -937,16 +935,8 @@ select::-ms-expand {
   border-radius: 16px;
 }
 
-.menu a .arrow {
-  margin-left: auto;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
-
-.menu a:hover .arrow {
-  transform: rotate(0deg);
-}
-
-.menu-despegable {
+.menu-despegable{
   display: none;
 }
+
+
