@@ -43,7 +43,7 @@
             </select>
         </div>
         <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
-        <h1>
+        <h1 class="titulin">
           <xsl:value-of select="temporada1/numtemp"/>
           <xsl:value-of select="temporada2/numtemp"/>  
           </h1>

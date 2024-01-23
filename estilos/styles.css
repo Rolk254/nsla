@@ -352,7 +352,9 @@ select {
   background-color: #fff;
   outline: none;
 }
-
+.titulin {
+  text-align: center;
+}
 button {
   padding: 10px 15px;
   font-size: 16px;
