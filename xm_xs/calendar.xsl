@@ -66,6 +66,7 @@
 
   <xsl:template match="jornada" mode="menu">
     <a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a>
+    <span class="arrow">▶️</span>
 </xsl:template>
 
 <xsl:template match="jornada">
