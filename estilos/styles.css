@@ -524,6 +524,9 @@ header{
 @media screen and (max-width: 730px) {
 .space{
   justify-content:flex-start;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
 }
 label h3{
   margin-right: 15%;
@@ -531,12 +534,6 @@ label h3{
 .podium{
   margin-top: 100px;
 }
-}
-.space{
-  display: flex;
-  cursor: pointer;
-  justify-content: space-around;
-  margin: 10px;
 }
 /*Tabla clasificación*/
 .divtabla {
