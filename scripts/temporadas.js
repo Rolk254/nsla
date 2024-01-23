@@ -1,9 +1,5 @@
 function redirigir() {
     var temporadaSeleccionada = document.getElementById("temporadaSelector").value;
-
-    // Muestra el valor seleccionado en la consola (para propósitos de depuración)
-    console.log("Temporada seleccionada:", temporadaSeleccionada);
-
     // Redirigir según la temporada seleccionada
     switch (temporadaSeleccionada) {
         case "1":
