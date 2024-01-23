@@ -354,6 +354,7 @@ select {
 }
 .titulin {
   text-align: center;
+  font-size: 120%;
 }
 button {
   padding: 10px 15px;
