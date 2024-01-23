@@ -65,6 +65,9 @@
               </tr>
                 <xsl:apply-templates select="equipo">
                   <xsl:sort select="victorias" order="descending" data-type="number"/>
+                  <xsl:sort select="derrotas" order="ascending" data-type="number"/>
+                  <xsl:sort select="victorias" order="descending" data-type="number"/>
+                  <xsl:sort select="puntos_perdidos" order="ascending" data-type="number"/>
                 </xsl:apply-templates>
               </tbody>
             </table>
