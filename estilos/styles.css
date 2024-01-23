@@ -842,35 +842,7 @@ details[open] .toggle-summary .toggle-button {
   bottom: unset;
   transition-duration: 0.3s;
 }
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
 
-/* Custom Select wrapper */
-.select {
-  position: relative;
-  display: flex;
-  width: 14em; /* Modificado para hacerlo más pequeño */
-  height: 2em; /* Modificado para hacerlo más pequeño */
-  border-radius: .25em;
-  overflow: hidden;
-}
-
-/* Arrow */
-.select::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5em;
-  background-color: #002749;
-  pointer-events: none;
-}
-
-/* Transition */
-.select:hover::after {
-  color: #64b3db;
-}
 /*Estilos extra*/
 .textdecoration{
   text-decoration: none;
