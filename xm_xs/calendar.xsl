@@ -36,9 +36,9 @@
         </header>
         <div class="select">
             <select>
-                <option value="1">TEMPORADA 1</option>
-                <option value="2">TEMPORADA 2</option>
-                <option value="3">TEMPORADA 3</option>
+                <a href="calendar_t1.xml"><option value="1">TEMPORADA 1</option></a>
+                <a href="calendar_t2.xml"><option value="2">TEMPORADA 2</option></a>
+                <a href="calendar_t3.xml"><option value="3">TEMPORADA 3</option></a>
             </select>
         </div>
         <div class="menu">
