@@ -131,6 +131,14 @@ header{
   .boton{
     display: none;
   }
+
+  .menu-despegable{
+    background-color: #002749;
+    border-radius: 50%;
+    overflow: hidden;
+    float: right;
+    margin-top: 50%;
+  }
 }
 @media screen and (max-width: 500px) {
   .equipo-container {
@@ -898,6 +906,8 @@ select::-ms-expand {
 }
 .uppercase{
   text-transform: uppercase;
+
+/* Menu de jornadas */
 }
 .menu {
 margin-top: 5%;
@@ -923,3 +933,9 @@ margin-top: 5%;
   background-color: #3f91e4;
   border-radius: 16px;
 }
+
+.menu-despegable{
+  display: none;
+}
+
+
