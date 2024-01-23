@@ -35,11 +35,12 @@
               </div>
         </header>
         <div class="select" >
-            <select id="temporadaSelector" onchange="redirigir()">
-                <option value="1">TEMPORADA 1</option>
-                <option value="2">TEMPORADA 2</option>
+            <select id="seleccionarPagina">
+                <option value="calendar_t1.xml">TEMPORADA 1</option>
+                <option value="calendar_t2.xml">TEMPORADA 2</option>
                 <option value="3">TEMPORADA 3</option>
             </select>
+            <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
         </div>
         <div class="menu">
           <xsl:apply-templates select="//jornada" mode="menu"/>
