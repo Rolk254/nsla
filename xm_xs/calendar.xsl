@@ -34,8 +34,6 @@
                 <a href="../paginas/contacto.html">Contacto</a>
               </div>
         </header>
-        <xsl:value-of select="temporada1/numtemp"/>
-        <xsl:value-of select="temporada2/numtemp"/>
         <div class="select" >
             <select id="seleccionarPagina">
               <option value="">Selecciona una Temporada</option>
@@ -45,6 +43,10 @@
             </select>
         </div>
         <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
+        <h1>
+          <xsl:value-of select="temporada1/numtemp"/>
+          <xsl:value-of select="temporada2/numtemp"/>  
+          </h1>
         <div class="menu">
           <xsl:apply-templates select="//jornada" mode="menu"/>
       </div>
