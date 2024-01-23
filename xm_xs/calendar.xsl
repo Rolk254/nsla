@@ -34,7 +34,8 @@
                 <a href="../paginas/contacto.html">Contacto</a>
               </div>
         </header>
-        <h1><xsl:value-of select="numtemp"/></h1>
+        <xsl:value-of select="temporada1/numtemp"/>
+        <xsl:value-of select="temporada2/numtemp"/>
         <div class="select" >
             <select id="seleccionarPagina">
               <option value="">Selecciona una Temporada</option>
