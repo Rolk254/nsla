@@ -348,7 +348,7 @@ select {
   font-size: 14px;
   border: 1px solid #3f91e4;
   border-radius: 4px;
-  color: #3f91e4;
+  color: rgba(36,0,154,0.6559873949579832);
   background-color: #fff;
   outline: none;
 }
