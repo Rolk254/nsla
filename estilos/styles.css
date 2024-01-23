@@ -851,7 +851,7 @@ select::-ms-expand {
 .select {
   position: relative;
   display: flex;
-  width: 15em; /* Modificado para hacerlo más pequeño */
+  width: 13.5em; /* Modificado para hacerlo más pequeño */
   height: 2em; /* Modificado para hacerlo más pequeño */
   border-radius: .25em;
   overflow: hidden;
