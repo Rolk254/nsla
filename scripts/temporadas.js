@@ -11,15 +11,13 @@ function redirigir() {
             console.log("Redirigiendo a calendar_t2.xml");
             window.location.href = "calendar_t2.xml";
             break;
-        case "3":
-            console.log("Redirigiendo a calendar_t2.xml");
-            window.location.href = "../index.html";
-            break;
         // Agrega más casos según sea necesario para otras temporadas
         default:
             console.error("Temporada no reconocida");
-            break;
+            return; // Salir de la función si la temporada no es reconocida
     }
+
+    // No restablecer el valor del select aquí
 
     // Agregar una demora antes de restablecer el valor del select
     setTimeout(function() {
