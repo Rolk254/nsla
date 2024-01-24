@@ -75,8 +75,8 @@
                 </p>
               </li>
               <li class="terms">
-                <a href="privacidad.html">Política de Privacidad</a>
-                <a href="terminos.html">Terminos de Servicio</a>
+                <a href="../paginas/privacidad.html">Política de Privacidad</a>
+                <a href="../paginas/terminos.html">Terminos de Servicio</a>
                 <a href="">Terminos y Condiciones de Subscripción</a>
                 <a href="">Tus Ajustes de Privacidad</a>
                 <a href="">Ajustes de Cookies</a>
