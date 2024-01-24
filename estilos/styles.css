@@ -131,15 +131,6 @@ display: none;
 .boton{
   display: none;
 }
-
-.menu-despegable{
-  display: flex;
-  background-color: #002749;
-  border-radius: 50%;
-  overflow: hidden;
-  float: right;
-  margin-top: 50%;
-}
 }
 @media screen and (max-width: 500px) {
 .equipo-container {
@@ -198,15 +189,6 @@ label h3{
   }
   .boton{
     display: none;
-  }
-
-  .menu-despegable{
-    display: flex;
-    background-color: #002749;
-    border-radius: 50%;
-    overflow: hidden;
-    float: right;
-    margin-top: 50%;
   }
 }
 @media screen and (max-width: 500px) {
@@ -959,36 +941,12 @@ details[open] .toggle-summary .toggle-button {
 }
 .uppercase{
   text-transform: uppercase;
+}
 
 /* Menu de jornadas */
-}
-.menu {
-margin-top: 5%;
-  position: fixed;
-  left: 0;
-  width: 150px;
-  background-color: #003973;
-  color: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-}
 
-.menu a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 5px 0;
-  border-bottom: 1px solid #555;
-}
 
-.menu a:hover {
-  background-color: #3f91e4;
-  border-radius: 16px;
-}
 
-.menu-despegable{
-  display: none;
-}
+
 
 
