@@ -948,8 +948,8 @@ details[open] .toggle-summary .toggle-button {
   width: 200px;
   height: 100%;
   position: fixed;
-  left: -200px;
-  top: 0;
+  left: 5px;
+  top: 30px;
   background-color: #333;
   padding-top: 60px;
   transition: left 0.3s ease;
@@ -968,16 +968,4 @@ details[open] .toggle-summary .toggle-button {
   text-decoration: none;
   color: white;
   font-size: 18px;
-}
-
-.menu-toggle {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
