@@ -131,6 +131,10 @@ display: none;
 .boton{
   display: none;
 }
+.sidebar {
+  width: 120px;
+  right: 0px;
+}
 }
 @media screen and (max-width: 500px) {
 .equipo-container {
@@ -945,11 +949,10 @@ details[open] .toggle-summary .toggle-button {
 
 /* Menu de jornadas */
 .sidebar {
-  width: 120px;
+  width: 140px;
   position: fixed;
-  right: 0px;
+  right: 15px;
   top: 220px;
-  transition: left 0.3s ease;
   cursor: pointer;
 }
 
