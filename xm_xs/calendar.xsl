@@ -47,16 +47,16 @@
           <xsl:value-of select="temporada1/numtemp"/>
           <xsl:value-of select="temporada2/numtemp"/></u> 
           </h1>
-            <div class="menu-toggle" id="menuToggle">&#9776; Menú</div>
-            <nav class="sidebar" id="sidebar">
-              <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sección 1</a></li>
-                <li><a href="#">Sección 2</a></li>
-                <li><a href="#">Sección 3</a></li>
-                <!-- Agrega más elementos según sea necesario -->
-              </ul>
-            </nav>
+          <div class="menu-toggle" id="menuToggle">&#9776; Menú</div>
+          <nav class="sidebar" id="sidebar">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Sección 1</a></li>
+              <li><a href="#">Sección 2</a></li>
+              <li><a href="#">Sección 3</a></li>
+              <!-- Agrega más elementos según sea necesario -->
+            </ul>
+          </nav>
       <a class="boton" href="#active"><button class="pasubir">
         <svg class="svgIcon" viewBox="0 0 384 512">
           <path
