@@ -598,17 +598,46 @@ button:hover {
   color: black;
 }
 
-
 .infopartido {
-  margin-top: 20px;
-  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.infopartido h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.infopartido hr {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.infopartido .space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .infopartido h3 {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+  color: #555;
+  font-size: 18px;
+  margin: 0;
+}
+
+.infopartido a.colorblue {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.infopartido a.colorblue:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 730px) {
