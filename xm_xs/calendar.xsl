@@ -51,16 +51,7 @@
             <details>
               <summary>Jornadas</summary>
               <ul>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
-                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <xsl:apply-templates select="//jornada" mode="menu"/>
               </ul>
             </details>
           </nav>
@@ -80,6 +71,10 @@
     </body>
     </html>
   </xsl:template>
+
+  <xsl:template match="jornada" mode="menu">
+    <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+</xsl:template>
 
 <xsl:template match="jornada">
     <h1 id="jornada_{@num}" style="text-align:center;">Jornada <xsl:value-of select="@num"/></h1>
