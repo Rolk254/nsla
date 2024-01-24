@@ -1,32 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="temporada1">
-        <xs:complexType>
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="temporada1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numtemp" type="xs:string" />
+        <xs:element maxOccurs="unbounded" name="jornada">
+          <xs:complexType>
             <xs:sequence>
-                <xs:element name="jornada" maxOccurs="unbounded">
-                    <xs:complexType>
+              <xs:element maxOccurs="unbounded" name="partido">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="fecha" type="xs:string" />
+                    <xs:element name="hora" type="xs:string" />
+                    <xs:element name="equipos">
+                      <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="partido" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="fecha" type="xs:string" />
-                                        <xs:element name="hora" type="xs:string" />
-                                        <xs:element name="equipos">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="local" type="xs:string" />
-                                                    <xs:element name="visitante" type="xs:string" />
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
+                          <xs:element name="local" type="xs:string" />
+                          <xs:element name="puntoslocal" type="xs:unsignedByte" />
+                          <xs:element name="visitante" type="xs:string" />
+                          <xs:element name="puntosvisitante" type="xs:unsignedByte" />
                         </xs:sequence>
-                        <xs:attribute name="num" type="xs:integer" use="required" />
-                    </xs:complexType>
-                </xs:element>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+            <xs:attribute name="num" type="xs:unsignedByte" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

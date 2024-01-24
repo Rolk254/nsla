@@ -8,7 +8,9 @@
             <hora>20:00</hora>
             <equipos>
                 <local>Cardinals</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Cowboys</visitante>
+                <puntosvisitante>45</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -16,7 +18,9 @@
             <hora>21:30</hora>
             <equipos>
                 <local>Raiders</local>
+                <puntoslocal>20</puntoslocal>
                 <visitante>Steelers</visitante>
+                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -24,7 +28,9 @@
             <hora>23:00</hora>
             <equipos>
                 <local>Bengals</local>
+                <puntoslocal>40</puntoslocal>
                 <visitante>Rams</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -33,16 +39,20 @@
             <fecha>Viernes, 20 de octubre</fecha>
             <hora>19:00</hora>
             <equipos>
-                <local>Cowboys</local>
-                <visitante>Cardinals</visitante>
+                <local>Cardinals</local>
+                <puntoslocal>20</puntoslocal>
+                <visitante>Cowboys</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
         <partido>
             <fecha>Sábado, 21 de octubre</fecha>
             <hora>21:00</hora>
             <equipos>
-                <local>Steelers</local>
-                <visitante>Raiders</visitante>
+                <local>Raiders</local>
+                <puntoslocal>15</puntoslocal>
+                <visitante>Steelers</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -50,7 +60,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Rams</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Bengals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -60,7 +72,9 @@
             <hora>16:30</hora>
             <equipos>
                 <local>Cardinals</local>
+                <puntoslocal>20</puntoslocal>
                 <visitante>Raiders</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -68,7 +82,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Cowboys</local>
+                <puntoslocal>30</puntoslocal>
                 <visitante>Bengals</visitante>
+                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -76,17 +92,22 @@
             <hora>20:00</hora>
             <equipos>
                 <local>Rams</local>
+                <puntoslocal>40</puntoslocal>
                 <visitante>Steelers</visitante>
+                <puntosvisitante>15</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
+    
     <jornada num="4">
         <partido>
             <fecha>Martes, 7 de noviembre</fecha>
             <hora>17:15</hora>
             <equipos>
                 <local>Raiders</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Cardinals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -94,7 +115,9 @@
             <hora>18:45</hora>
             <equipos>
                 <local>Bengals</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Cowboys</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -102,7 +125,9 @@
             <hora>20:30</hora>
             <equipos>
                 <local>Steelers</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Rams</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -112,7 +137,9 @@
             <hora>16:45</hora>
             <equipos>
                 <local>Rams</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Steelers</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -120,7 +147,9 @@
             <hora>18:15</hora>
             <equipos>
                 <local>Bengals</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Cardinals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -128,7 +157,9 @@
             <hora>19:45</hora>
             <equipos>
                 <local>Chiefs</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Bears</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -136,17 +167,22 @@
             <hora>21:15</hora>
             <equipos>
                 <local>Cowboys</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Raiders</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
-    </jornada>
+    </jornada>    
+   <!-- Jornada 6 -->
     <jornada num="6">
         <partido>
             <fecha>Lunes, 4 de diciembre</fecha>
             <hora>16:45</hora>
             <equipos>
                 <local>Steelers</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Rams</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -154,7 +190,9 @@
             <hora>18:15</hora>
             <equipos>
                 <local>Cardinals</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Bengals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -162,7 +200,9 @@
             <hora>19:45</hora>
             <equipos>
                 <local>Bears</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Chiefs</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -170,17 +210,23 @@
             <hora>21:15</hora>
             <equipos>
                 <local>Raiders</local>
+                <puntoslocal>20</puntoslocal>
                 <visitante>Cowboys</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
+
+    <!-- Jornada 7 -->
     <jornada num="7">
         <partido>
             <fecha>Lunes, 11 de diciembre</fecha>
             <hora>16:30</hora>
             <equipos>
                 <local>Cowboys</local>
+                <puntoslocal>30</puntoslocal>
                 <visitante>Rams</visitante>
+                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -188,7 +234,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Raiders</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Cardinals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -196,7 +244,9 @@
             <hora>19:30</hora>
             <equipos>
                 <local>Bengals</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Bears</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -204,17 +254,22 @@
             <hora>21:00</hora>
             <equipos>
                 <local>Chiefs</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Steelers</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
-    </jornada> 
+    </jornada>
+    <!-- Jornada 8 -->
     <jornada num="8">
         <partido>
             <fecha>Lunes, 18 de diciembre</fecha>
             <hora>16:30</hora>
             <equipos>
                 <local>Rams</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Cowboys</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -222,7 +277,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Cardinals</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Raiders</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -230,7 +287,9 @@
             <hora>19:30</hora>
             <equipos>
                 <local>Bears</local>
+                <puntoslocal>20</puntoslocal>
                 <visitante>Bengals</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -238,17 +297,23 @@
             <hora>21:00</hora>
             <equipos>
                 <local>Steelers</local>
+                <puntoslocal>30</puntoslocal>
                 <visitante>Chiefs</visitante>
+                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
+
+    <!-- Jornada 9 -->
     <jornada num="9">
         <partido>
             <fecha>Lunes, 20 de diciembre</fecha>
             <hora>16:30</hora>
             <equipos>
                 <local>Cardinals</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Bears</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -256,7 +321,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Steelers</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Rams</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -264,7 +331,9 @@
             <hora>19:30</hora>
             <equipos>
                 <local>Cowboys</local>
+                <puntoslocal>35</puntoslocal>
                 <visitante>Raiders</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -272,17 +341,23 @@
             <hora>21:00</hora>
             <equipos>
                 <local>Bengals</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Chiefs</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
+
+    <!-- Jornada 10 -->
     <jornada num="10">
         <partido>
             <fecha>Lunes, 27 de diciembre</fecha>
             <hora>16:30</hora>
             <equipos>
                 <local>Bears</local>
+                <puntoslocal>20</puntoslocal>
                 <visitante>Cardinals</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -290,7 +365,9 @@
             <hora>18:00</hora>
             <equipos>
                 <local>Rams</local>
+                <puntoslocal>30</puntoslocal>
                 <visitante>Steelers</visitante>
+                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -298,7 +375,9 @@
             <hora>19:30</hora>
             <equipos>
                 <local>Raiders</local>
+                <puntoslocal>15</puntoslocal>
                 <visitante>Cowboys</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -306,8 +385,11 @@
             <hora>21:00</hora>
             <equipos>
                 <local>Chiefs</local>
+                <puntoslocal>25</puntoslocal>
                 <visitante>Bengals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
-    </jornada>      
+    </jornada>
+
 </temporada1>
