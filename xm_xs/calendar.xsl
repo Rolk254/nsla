@@ -81,10 +81,6 @@
     </html>
   </xsl:template>
 
-  <xsl:template match="jornada" mode="menu">
-    <a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a>
-</xsl:template>
-
 <xsl:template match="jornada">
     <h1 id="jornada_{@num}" style="text-align:center;">Jornada <xsl:value-of select="@num"/></h1>
     <div class="divpartidos">
