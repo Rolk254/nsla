@@ -945,11 +945,12 @@ details[open] .toggle-summary .toggle-button {
 
 /* Menu de jornadas */
 .sidebar {
-  width: 200px;
+  width: 100px;
   position: fixed;
   right: 0px;
   top: 220px;
   transition: left 0.3s ease;
+  cursor: pointer;
 }
 
 .sidebar ul {
