@@ -945,7 +945,7 @@ details[open] .toggle-summary .toggle-button {
 
 /* Menu de jornadas */
 .sidebar {
-  width: 100px;
+  width: 120px;
   position: fixed;
   right: 0px;
   top: 220px;
