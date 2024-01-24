@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener la referencia al elemento del footer
-    var footer = document.querySelector('.footer'); // Cambié 'myFooter' por '.footer'
+    var footer = document.querySelector('.footer'); // Cambié 'footer' por '.footer'
   
     // Crear los elementos y agregar el contenido del footer
     var ul = document.createElement('ul');

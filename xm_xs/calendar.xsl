@@ -63,8 +63,7 @@
             </svg>
           </button></a>
         <xsl:apply-templates select="//jornada"/>
-        <footer class="footer" id="myFooter">
-        </footer>
+        <footer class="footer" id="footer"></footer>
         <script src="../scripts/footer.js"></script>
         <script src="../scripts/temporadas.js"></script>
     </body>
