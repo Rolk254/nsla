@@ -49,13 +49,13 @@
           </h1>
           <div class="menu-toggle" id="menuToggle">&#9776; Menú</div>
             <nav class="sidebar" id="sidebar">
-              <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sección 1</a></li>
-                <li><a href="#">Sección 2</a></li>
-                <li><a href="#">Sección 3</a></li>
-                <!-- Agrega más elementos según sea necesario -->
-              </ul>
+              <details>
+                <summary>Jornadas</summary>
+                <ul>
+                  <li><a href="#jornada1">Jornada 1</a></li>
+                  <li><a href="#jornada2">Jornada 2</a></li>
+                </ul>
+              </details>
             </nav>
       <a class="boton" href="#active"><button class="pasubir">
         <svg class="svgIcon" viewBox="0 0 384 512">
