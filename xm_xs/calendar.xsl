@@ -112,7 +112,7 @@
         <h3>
           <xsl:value-of select="equipos/puntoslocal"/>
         </h3>
-          Vs
+          -
         <h3>
           <xsl:value-of select="equipos/puntosvisitante"/>
         </h3>
