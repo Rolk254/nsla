@@ -51,8 +51,16 @@
             <details>
               <summary>Jornadas</summary>
               <ul>
-                <li><a href="#jornada1">Jornada 1</a></li>
-                <li><a href="#jornada2">Jornada 2</a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
+                <li><a href="#jornada_{@num}">Jornada <xsl:value-of select="@num"/></a></li>
               </ul>
             </details>
           </nav>
