@@ -391,7 +391,6 @@ label h3{
 .fechahora {
   border: 2px solid white;
   border-radius: 20px;
-  justify-content: space-around;
 }
 select {
   padding: 10.5px;
