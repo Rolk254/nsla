@@ -64,7 +64,6 @@
           </button></a>
         <xsl:apply-templates select="//jornada"/>
         <footer class="footer" id="myFooter">
-            <div></div>
         </footer>
         <script src="../scripts/footer.js"></script>
         <script src="../scripts/temporadas.js"></script>
