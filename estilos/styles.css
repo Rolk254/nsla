@@ -999,3 +999,9 @@ details[open] .toggle-summary .toggle-button {
   color: white;
   font-size: 14px;
 }
+.jornada{
+  text-align:center;
+  background-color: #115498;
+  color: white; 
+  padding: 10px;
+}
