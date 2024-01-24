@@ -946,12 +946,10 @@ details[open] .toggle-summary .toggle-button {
 /* Menu de jornadas */
 .sidebar {
   width: 200px;
-  height: 100%;
   position: fixed;
   left: 5px;
   top: 30px;
   background-color: #333;
-  padding-top: 60px;
   transition: left 0.3s ease;
 }
 
