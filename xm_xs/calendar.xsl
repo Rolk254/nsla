@@ -57,7 +57,6 @@
                 <!-- Agrega más elementos según sea necesario -->
               </ul>
             </nav>
-          </div>
       <a class="boton" href="#active"><button class="pasubir">
         <svg class="svgIcon" viewBox="0 0 384 512">
           <path
