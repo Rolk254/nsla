@@ -63,8 +63,27 @@
             </svg>
           </button></a>
         <xsl:apply-templates select="//jornada"/>
-        <footer class="footer" id="footer"/>
-        <script src="../scripts/footer.js"/>
+        <footer class="footer">
+          <div>
+            <ul>
+              <li><img class="logopie" src="../imagenes/logos/nofondo.png" alt=""/></li>
+              <li>
+                <p>
+                  © 2023 NSLA Enterprises LLC. NSLA and the NSLA shield design are registered trademarks of the National Football League.
+                  The team names, logos and uniform designs are registered trademarks of the teams indicated.
+                  All other NSLA-related trademarks are trademarks of the National Football League. NSLA footage © NSLA Productions LLC.
+                </p>
+              </li>
+              <li class="terms">
+                <a href="privacidad.html">Política de Privacidad</a>
+                <a href="terminos.html">Terminos de Servicio</a>
+                <a href="">Terminos y Condiciones de Subscripción</a>
+                <a href="">Tus Ajustes de Privacidad</a>
+                <a href="">Ajustes de Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
         <script src="../scripts/temporadas.js"></script>
     </body>
     </html>
