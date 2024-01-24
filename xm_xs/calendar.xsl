@@ -107,7 +107,27 @@
       <label class="space">
         <h3><xsl:value-of select="hora"/></h3>
         <h3>
-          <xsl:choose>
+          <xsl:apply-templates select="equipo"></xsl:apply-templates>
+          <xsl:value-of select="equipos/local"/>
+        </h3>
+        <h3>
+          <xsl:value-of select="equipos/puntoslocal"/>
+        </h3>
+          -
+        <h3>
+          <xsl:value-of select="equipos/puntosvisitante"/>
+        </h3>
+        <h3>
+          <xsl:value-of select="equipos/visitante"/>
+        </h3>
+        <a class="colorblue">Tickets</a>
+      </label>
+      <hr/>
+    </div>
+  </xsl:template>
+
+  <xsl:template match="equipo">
+        <xsl:choose>
           <xsl:when test="translate(nombre, ' ', '') = 'Cardinals'">
             <xsl:attribute name="class">cardinals</xsl:attribute>
           </xsl:when>
@@ -141,23 +161,6 @@
           <xsl:attribute name="width">30px</xsl:attribute>
         </img>
         <xsl:value-of select="concat(' ', nombre)"/>
-          <xsl:value-of select="equipos/local"/>
-        </h3>
-        <h3>
-          <xsl:value-of select="equipos/puntoslocal"/>
-        </h3>
-          -
-        <h3>
-          <xsl:value-of select="equipos/puntosvisitante"/>
-        </h3>
-        <h3>
-          <xsl:value-of select="equipos/visitante"/>
-        </h3>
-        <a class="colorblue">Tickets</a>
-      </label>
-      <hr/>
-    </div>
+
   </xsl:template>
-
-
 </xsl:stylesheet>
