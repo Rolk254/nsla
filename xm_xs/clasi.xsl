@@ -58,8 +58,8 @@
                   <th title="Victorias">V</th>
                   <th title="Derrotas">D</th>
                   <th title="Empates">E</th>
-                  <th title="Local">Ll</th>
-                  <th title="Visitante">Vs</th>
+                  <th title="Local">LC</th>
+                  <th title="Visitante">VS</th>
                   <th title="Puntos Perdidos">PP</th>
                   <th title="Puntos Conseguidos">PC</th>
               </tr>
