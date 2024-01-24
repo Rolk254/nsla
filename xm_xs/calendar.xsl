@@ -107,6 +107,40 @@
       <label class="space">
         <h3><xsl:value-of select="hora"/></h3>
         <h3>
+          <xsl:choose>
+          <xsl:when test="translate(nombre, ' ', '') = 'Cardinals'">
+            <xsl:attribute name="class">cardinals</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Cowboys'">
+            <xsl:attribute name="class">cowboys</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Raiders'">
+            <xsl:attribute name="class">raiders</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Steelers'">
+            <xsl:attribute name="class">steelers</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Bengals'">
+            <xsl:attribute name="class">bengals</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Rams'">
+            <xsl:attribute name="class">rams</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Chiefs'">
+            <xsl:attribute name="class">chiefs</xsl:attribute>
+          </xsl:when>
+          <xsl:when test="translate(nombre, ' ', '') = 'Bears'">
+            <xsl:attribute name="class">bears</xsl:attribute>
+          </xsl:when>
+        </xsl:choose>
+        <img>
+         <xsl:attribute name="src">
+            <xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/>
+        </xsl:attribute>
+          <xsl:attribute name="alt">Logo</xsl:attribute>
+          <xsl:attribute name="width">30px</xsl:attribute>
+        </img>
+        <xsl:value-of select="concat(' ', nombre)"/>
           <xsl:value-of select="equipos/local"/>
         </h3>
         <h3>
