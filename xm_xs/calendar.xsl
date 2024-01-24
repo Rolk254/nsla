@@ -77,7 +77,6 @@
         </footer>
         <script src="../scripts/footer.js"></script>
         <script src="../scripts/temporadas.js"></script>
-        <script src="../scripts/prueba.js"></script>
     </body>
     </html>
   </xsl:template>
