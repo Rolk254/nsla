@@ -948,7 +948,7 @@ details[open] .toggle-summary .toggle-button {
   width: 200px;
   position: fixed;
   left: 5px;
-  top: 80px;
+  top: 140px;
   transition: left 0.3s ease;
 }
 
