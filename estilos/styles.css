@@ -947,7 +947,7 @@ details[open] .toggle-summary .toggle-button {
 .sidebar {
   width: 200px;
   position: fixed;
-  left: 5px;
+  right: 0px;
   top: 220px;
   transition: left 0.3s ease;
 }
