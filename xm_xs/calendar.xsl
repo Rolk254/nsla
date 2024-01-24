@@ -107,11 +107,17 @@
       <label class="space">
         <h3><xsl:value-of select="hora"/></h3>
         <h3>
-          <xsl:value-of select="equipos/puntoslocal"/>|
           <xsl:value-of select="equipos/local"/>
+        </h3>
+        <h3>
+          <xsl:value-of select="equipos/puntoslocal"/>
+        </h3>
           Vs
-          <xsl:value-of select="equipos/visitante"/>|
+        <h3>
           <xsl:value-of select="equipos/puntosvisitante"/>
+        </h3>
+        <h3>
+          <xsl:value-of select="equipos/visitante"/>
         </h3>
         <a class="colorblue">Tickets</a>
       </label>
