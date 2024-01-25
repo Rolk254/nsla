@@ -102,7 +102,7 @@
 
   <xsl:template match="partido">
     <div class="infopartido">
-      <h2><xsl:value-of select="fecha"/><xsl:value-of select="hora"/></h2>
+      <h2><xsl:value-of select="fecha"/> <h3><xsl:value-of select="hora"/><h3></h2>
       <hr/>
       <label class="space">
         <h3>
