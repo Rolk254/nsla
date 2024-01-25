@@ -119,7 +119,6 @@
         <h3>
           <xsl:value-of select="equipos/visitante"/>
         </h3>
-        <a class="colorblue">Tickets</a>
       </label>
       <hr/>
     </div>
