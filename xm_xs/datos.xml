@@ -131,9 +131,7 @@
 <nombreequipo>
     <nombre>Cowboys</nombre>
 </nombreequipo>
-<escudo>
-    ../imagenes/otras/logosequipos/Cowboys.png
-</escudo>
+<escudo>../imagenes/otras/logosequipos/Cowboys.png</escudo>
 <entrenador>
     <nombre>Mike McCarthy</nombre>
     <imagen>../imagenes/otras/checo.png</imagen>
