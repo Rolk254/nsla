@@ -15,7 +15,7 @@
       <body>
         <header>
           <div class="left-section">
-            <a href="../index.html"><img style="margin-left: 20%;" src="../imagenes/logos/nofondo2.png" alt=""/></a>
+            <a href="../index.html"><img class="marginleft" src="../imagenes/logos/nofondo2.png" alt=""/></a>
           </div>
           <div class="togglearea">
             <label for="toggle">
