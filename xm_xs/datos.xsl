@@ -80,7 +80,7 @@
             <h1>Escudo:</h1>
             <div class="divjugadores">
               <div>
-                <img class="fotoequipos" src="{escudo}" alt="{escudo}"/>
+                <img class="logito" src="{escudo}" alt="{escudo}"/>
               </div>
             </div>
             <h1>Entrenador:</h1>
