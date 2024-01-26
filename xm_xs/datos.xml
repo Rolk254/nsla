@@ -5,11 +5,13 @@
     <nombreequipo>
      <nombre>Cardinals</nombre>
     </nombreequipo>
+    <escudo>
+        ..imagenes/otras/logosequipos/Cardinals.png
+    </escudo>
     <entrenador>
      <nombre>Jonathan Gannon</nombre>
      <imagen>../imagenes\otras\ganon.png</imagen>
     </entrenador>
-    
     <jugadores>
     <LB>
      <jugador>
@@ -129,6 +131,9 @@
 <nombreequipo>
     <nombre>Cowboys</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Cowboys.png
+</escudo>
 <entrenador>
     <nombre>Mike McCarthy</nombre>
     <imagen>../imagenes/otras/checo.png</imagen>
@@ -241,6 +246,9 @@
 <nombreequipo>
 <nombre>Raiders</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Raiders.png
+</escudo>
 <entrenador>
     <nombre>Josh McDaniels</nombre>
     <imagen>../imagenes\otras\raicoah.png</imagen>
@@ -322,6 +330,9 @@
 <nombreequipo>
     <nombre>Steelers</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Steelers.png
+</escudo>
 <entrenador>
     <nombre>John Smith</nombre>
     <imagen>https://is.gd/iUkpBv</imagen>
@@ -404,6 +415,9 @@
 <nombreequipo>
     <nombre>Rams</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Rams.png
+</escudo>
 <entrenador>
     <nombre>Sean McVay</nombre>
     <imagen>https://www.farma-erp.cl/img/no_photo.png</imagen>
@@ -494,6 +508,9 @@
 <nombreequipo>
     <nombre>Chiefs</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Chiefs.png
+</escudo>
 <entrenador>
     <nombre>Andy Reid</nombre>
     <imagen>https://www.farma-erp.cl/img/no_photo.png</imagen>
@@ -581,6 +598,9 @@
 <nombreequipo>
     <nombre>Bengals</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Bengals.png
+</escudo>
 <entrenador>
     <nombre>Zac Taylor</nombre>
     <imagen>https://www.farma-erp.cl/img/no_photo.png</imagen>
@@ -668,6 +688,9 @@
 <nombreequipo>
     <nombre>Bears</nombre>
 </nombreequipo>
+<escudo>
+    ..imagenes/otras/logosequipos/Bears.png
+</escudo>
 <entrenador>
     <nombre>John Smith</nombre>
     <imagen>https://www.farma-erp.cl/img/no_photo.png</imagen>

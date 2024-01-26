@@ -77,6 +77,13 @@
               <p><xsl:value-of select="nombreequipo/nombre"/></p>
               <span class="toggle-button">▶</span>
             </summary>
+            <h1>Escudo:</h1>
+            <div class="divjugadores">
+              <div>
+                <img class="fotoequipos" src="{escudo}" alt="{escudo}"/>
+                <p><xsl:value-of select="escudo"/></p>
+              </div>
+            </div>
             <h1>Entrenador:</h1>
             <div class="divjugadores">
               <div>
