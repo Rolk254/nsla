@@ -17,9 +17,10 @@ function construirTabla(xml) {
   // Obtener la referencia al cuerpo de la tabla
   var tbody = document.getElementById('tablaBody');
 
-  // Crear objetos para realizar un seguimiento de partidos jugados y victorias por cada equipo
+  // Crear objetos para realizar un seguimiento de partidos jugados, victorias y derrotas por cada equipo
   var partidosJugados = {};
   var victorias = {};
+  var derrotas = {};
 
   // Obtener la lista de jornadas del XML
   var jornadas = xml.querySelectorAll('jornada');
@@ -29,7 +30,7 @@ function construirTabla(xml) {
     // Obtener la lista de partidos de la jornada
     var partidos = jornada.querySelectorAll('partido');
 
-    // Iterar sobre los partidos y actualizar los objetos partidosJugados y victorias
+    // Iterar sobre los partidos y actualizar los objetos partidosJugados, victorias y derrotas
     partidos.forEach(function (partido) {
       var equipos = partido.querySelectorAll('local, visitante');
       var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
@@ -44,29 +45,31 @@ function construirTabla(xml) {
       actualizarContador(partidosJugados, nombreLocal);
       actualizarContador(partidosJugados, nombreVisitante);
 
-      // Determinar el equipo ganador y actualizar victorias
+      // Determinar el equipo ganador y actualizar victorias y derrotas
       if (puntosLocal > puntosVisitante) {
         actualizarContador(victorias, nombreLocal);
+        actualizarContador(derrotas, nombreVisitante);
       } else if (puntosVisitante > puntosLocal) {
         actualizarContador(victorias, nombreVisitante);
+        actualizarContador(derrotas, nombreLocal);
       }
     });
   });
 
-  // Agregar las filas a la tabla con el número de partidos jugados y victorias por cada equipo
+  // Agregar las filas a la tabla con el número de partidos jugados, victorias y derrotas por cada equipo
   for (var equipo in partidosJugados) {
     var fila = tbody.insertRow();
     fila.insertCell(0).textContent = equipo;
     fila.insertCell(1).textContent = partidosJugados[equipo];
     fila.insertCell(2).textContent = victorias[equipo] || 0;
+    fila.insertCell(3).textContent = derrotas[equipo] || 0;
   }
 }
 
-// Función para actualizar el contador de partidos jugados o victorias para un equipo
+// Función para actualizar el contador de partidos jugados, victorias o derrotas para un equipo
 function actualizarContador(contador, equipo) {
   if (!contador[equipo]) {
     contador[equipo] = 0;
   }
   contador[equipo]++;
 }
-c
