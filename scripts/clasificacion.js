@@ -1,80 +1,107 @@
-var xmlPath = '../xm_xs/calendar_t1.xml';
+// Cargar el XML
+var url = '../xm_xs/calendar_t1.xml';
 
-// Realizar la solicitud Fetch para obtener el contenido del archivo XML
-fetch(xmlPath)
+fetch(url)
   .then(response => response.text())
-  .then(xmlString => {
-    // Crear un nuevo objeto DOMParser
+  .then(data => {
     var parser = new DOMParser();
-    var xmlDoc = parser.parseFromString(xmlString, "text/xml");
+    var xmlDoc = parser.parseFromString(data, 'application/xml');
+    
+    // Llamar a las funciones para calcular y actualizar la tabla
+    calcularPartidosJugados(xmlDoc);
+    calcularVictorias(xmlDoc);
+    calcularDerrotas(xmlDoc);
+    calcularEmpates(xmlDoc);
+  })
+  .catch(error => console.error('Error al cargar el XML:', error));
 
-    // Obtén la referencia al tbody
-    var tablaBody = document.getElementById("tablaBody");
+// Función para actualizar la tabla con los valores calculados
+function actualizarTabla(nombreEquipo, partidosJugados, victorias, derrotas, empates, locales, visitantes, puntosPerdidos, puntosConseguidos) {
+  var equipoRow = document.getElementById(nombreEquipo);
 
-    // Obtén la lista de equipos del XML
-    var equipos = xmlDoc.querySelectorAll("equipos");
+  if (equipoRow) {
+    equipoRow.cells[1].textContent = partidosJugados;
+    equipoRow.cells[2].textContent = victorias;
+    equipoRow.cells[3].textContent = derrotas;
+    equipoRow.cells[4].textContent = empates;
+    equipoRow.cells[5].textContent = locales;
+    equipoRow.cells[6].textContent = visitantes;
+    equipoRow.cells[7].textContent = puntosPerdidos;
+    equipoRow.cells[8].textContent = puntosConseguidos;
+  }
+}
 
-    // Itera sobre los equipos y crea las filas de la tabla
-    equipos.forEach(function (equipo) {
-      var fila = document.createElement("tr");
+// Función para calcular partidos jugados
+function calcularPartidosJugados(xml) {
+  var equipos = xml.querySelectorAll('equipo');
 
-      // Nombre del equipo
-      var nombreEquipo = document.createElement("td");
-      nombreEquipo.textContent = equipo.querySelector("local").textContent;
-      fila.appendChild(nombreEquipo);
+  equipos.forEach(function(equipo) {
+    var partidosJugados = parseInt(equipo.querySelector('partidos_jugados').textContent);
+    var nombreEquipo = equipo.querySelector('nombre').textContent;
 
-      // Calcula estadísticas
-      var victorias = calcularVictorias(equipo);
-      var empates = calcularEmpates(equipo);
-      var derrotas = calcularDerrotas(equipo);
-      var partidosJugados = victorias + empates + derrotas;
-      var puntos = victorias * 3 + empates;
-
-      // Agrega datos a las celdas
-      fila.innerHTML += `<td>${victorias}</td>`;
-      fila.innerHTML += `<td>${empates}</td>`;
-      fila.innerHTML += `<td>${derrotas}</td>`;
-      fila.innerHTML += `<td>${partidosJugados}</td>`;
-      fila.innerHTML += `<td>${puntos}</td>`;
-
-      tablaBody.appendChild(fila);
-    });
+    actualizarTabla(nombreEquipo, partidosJugados, 0, 0, 0, 0, 0, 0, 0);
   });
+}
 
-// Funciones para calcular estadísticas
+// Función para calcular victorias
 function calcularVictorias(xml) {
-    var equipos = xml.querySelectorAll('equipo');
+  var equipos = xml.querySelectorAll('equipo');
 
-    equipos.forEach(function (equipo) {
-        // Resto del código...
-        var puntosLocal = equipo.querySelector('puntoslocal').textContent;
-        var puntosVisitante = equipo.querySelector('puntosvisitante').textContent;
+  equipos.forEach(function(equipo) {
+    var puntosLocal = parseInt(equipo.querySelector('puntoslocal').textContent);
+    var puntosVisitante = parseInt(equipo.querySelector('puntosvisitante').textContent);
+    var nombreEquipo = equipo.querySelector('nombre').textContent;
 
-        // Resto del código...
-    });
-}
-function calcularEmpates(xml) {
-    var equipos = xml.querySelectorAll('equipo');
+    if (!isNaN(puntosLocal) && !isNaN(puntosVisitante)) {
+      var victorias = 0;
 
-    equipos.forEach(function (equipo) {
-        var puntosLocal = equipo.querySelector('puntoslocal').textContent;
-        var puntosVisitante = equipo.querySelector('puntosvisitante').textContent;
+      if (puntosLocal > puntosVisitante) {
+        victorias = 1;
+      }
 
-        if (puntosLocal === puntosVisitante) {
-            // Lógica para incrementar el contador de empates para el equipo...
-        }
-    });
+      actualizarTabla(nombreEquipo, 0, victorias, 0, 0, 0, 0, 0, 0);
+    }
+  });
 }
 
+// Función para calcular derrotas
 function calcularDerrotas(xml) {
-    var equipos = xml.querySelectorAll('equipo');
+  var equipos = xml.querySelectorAll('equipo');
 
-    equipos.forEach(function (equipo) {
-        var puntosLocal = parseInt(equipo.querySelector('puntoslocal').textContent);
-        var puntosVisitante = parseInt(equipo.querySelector('puntosvisitante').textContent);
+  equipos.forEach(function(equipo) {
+    var puntosLocal = parseInt(equipo.querySelector('puntoslocal').textContent);
+    var puntosVisitante = parseInt(equipo.querySelector('puntosvisitante').textContent);
+    var nombreEquipo = equipo.querySelector('nombre').textContent;
 
-        if (puntosLocal < puntosVisitante) {
-            // Lógica para incrementar el contador de derrotas para el equipo...
-        }
-    });
+    if (!isNaN(puntosLocal) && !isNaN(puntosVisitante)) {
+      var derrotas = 0;
+
+      if (puntosLocal < puntosVisitante) {
+        derrotas = 1;
+      }
+
+      actualizarTabla(nombreEquipo, 0, 0, derrotas, 0, 0, 0, 0, 0);
+    }
+  });
+}
+
+// Función para calcular empates
+function calcularEmpates(xml) {
+  var equipos = xml.querySelectorAll('equipo');
+
+  equipos.forEach(function(equipo) {
+    var puntosLocal = parseInt(equipo.querySelector('puntoslocal').textContent);
+    var puntosVisitante = parseInt(equipo.querySelector('puntosvisitante').textContent);
+    var nombreEquipo = equipo.querySelector('nombre').textContent;
+
+    if (!isNaN(puntosLocal) && !isNaN(puntosVisitante)) {
+      var empates = 0;
+
+      if (puntosLocal === puntosVisitante) {
+        empates = 1;
+      }
+
+      actualizarTabla(nombreEquipo, 0, 0, 0, empates, 0, 0, 0, 0);
+    }
+  });
 }
