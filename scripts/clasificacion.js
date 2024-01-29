@@ -25,11 +25,26 @@ function construirTabla(xml) {
     var local = equipo.querySelector('local').textContent;
     var visitante = equipo.querySelector('visitante').textContent;
 
-    // Crear una nueva fila para cada equipo
-    var filaLocal = tbody.insertRow();
-    filaLocal.insertCell(0).textContent = local;
+    // Añadir equipos solo si no están ya en la lista
+    if (!equipoEnLista(tbody, local)) {
+      var filaLocal = tbody.insertRow();
+      filaLocal.insertCell(0).textContent = local;
+    }
 
-    var filaVisitante = tbody.insertRow();
-    filaVisitante.insertCell(0).textContent = visitante;
+    if (!equipoEnLista(tbody, visitante)) {
+      var filaVisitante = tbody.insertRow();
+      filaVisitante.insertCell(0).textContent = visitante;
+    }
   });
+}
+
+// Función auxiliar para verificar si un equipo ya está en la lista
+function equipoEnLista(tbody, nombreEquipo) {
+  var filas = tbody.getElementsByTagName('tr');
+  for (var i = 0; i < filas.length; i++) {
+    if (filas[i].getElementsByTagName('td')[0].textContent === nombreEquipo) {
+      return true;
+    }
+  }
+  return false;
 }
