@@ -42,8 +42,16 @@ fetch(xmlPath)
   });
 
 // Funciones para calcular estadísticas
-function calcularVictorias(equipo) {
-  return equipo.querySelectorAll("puntoslocal:only-child:not(:empty):not(0)").length;
+function calcularVictorias(xml) {
+    var equipos = xml.querySelectorAll('equipo');
+
+    equipos.forEach(function (equipo) {
+        // Resto del código...
+        var puntosLocal = equipo.querySelector('puntoslocal').textContent;
+        var puntosVisitante = equipo.querySelector('puntosvisitante').textContent;
+
+        // Resto del código...
+    });
 }
 
 function calcularEmpates(equipo) {
