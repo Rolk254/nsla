@@ -17,8 +17,9 @@ function construirTabla(xml) {
   // Obtener la referencia al cuerpo de la tabla
   var tbody = document.getElementById('tablaBody');
 
-  // Crear un objeto para realizar un seguimiento de los partidos jugados por cada equipo
+  // Crear objetos para realizar un seguimiento de partidos jugados y victorias por cada equipo
   var partidosJugados = {};
+  var victorias = {};
 
   // Obtener la lista de jornadas del XML
   var jornadas = xml.querySelectorAll('jornada');
@@ -28,28 +29,43 @@ function construirTabla(xml) {
     // Obtener la lista de partidos de la jornada
     var partidos = jornada.querySelectorAll('partido');
 
-    // Iterar sobre los partidos y actualizar el objeto partidosJugados
+    // Iterar sobre los partidos y actualizar los objetos partidosJugados y victorias
     partidos.forEach(function (partido) {
       var equipos = partido.querySelectorAll('local, visitante');
+      var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
 
-      equipos.forEach(function (equipo) {
-        var nombreEquipo = equipo.textContent;
+      // Obtener nombres y puntos de los equipos
+      var nombreLocal = equipos[0].textContent;
+      var nombreVisitante = equipos[1].textContent;
+      var puntosLocal = parseInt(puntos[0].textContent);
+      var puntosVisitante = parseInt(puntos[1].textContent);
 
-        // Añadir el equipo al objeto partidosJugados si aún no está presente
-        if (!partidosJugados[nombreEquipo]) {
-          partidosJugados[nombreEquipo] = 0;
-        }
+      // Actualizar partidos jugados para ambos equipos
+      actualizarContador(partidosJugados, nombreLocal);
+      actualizarContador(partidosJugados, nombreVisitante);
 
-        // Incrementar el contador de partidos jugados para el equipo actual
-        partidosJugados[nombreEquipo]++;
-      });
+      // Determinar el equipo ganador y actualizar victorias
+      if (puntosLocal > puntosVisitante) {
+        actualizarContador(victorias, nombreLocal);
+      } else if (puntosVisitante > puntosLocal) {
+        actualizarContador(victorias, nombreVisitante);
+      }
     });
   });
 
-  // Agregar las filas a la tabla con el número de partidos jugados por cada equipo
+  // Agregar las filas a la tabla con el número de partidos jugados y victorias por cada equipo
   for (var equipo in partidosJugados) {
     var fila = tbody.insertRow();
     fila.insertCell(0).textContent = equipo;
     fila.insertCell(1).textContent = partidosJugados[equipo];
+    fila.insertCell(2).textContent = victorias[equipo] || 0;
   }
+}
+
+// Función para actualizar el contador de partidos jugados o victorias para un equipo
+function actualizarContador(contador, equipo) {
+  if (!contador[equipo]) {
+    contador[equipo] = 0;
+  }
+  contador[equipo]++;
 }
