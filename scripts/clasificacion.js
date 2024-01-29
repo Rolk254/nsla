@@ -1,63 +1,55 @@
- // Datos del XML (reemplaza este string con el contenido de tu XML)
- var xmlString = `...`; // Copia aquí el contenido de tu XML
+var xmlPath = '../xm_xs/calendar_t1.xml';
 
- // Crear un nuevo objeto DOMParser
- var parser = new DOMParser();
- var xmlDoc = parser.parseFromString(xmlString, "text/xml");
+// Realizar la solicitud Fetch para obtener el contenido del archivo XML
+fetch(xmlPath)
+  .then(response => response.text())
+  .then(xmlString => {
+    // Crear un nuevo objeto DOMParser
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(xmlString, "text/xml");
 
- // Obtén la referencia al tbody
- var tablaBody = document.getElementById("tablaBody");
+    // Obtén la referencia al tbody
+    var tablaBody = document.getElementById("tablaBody");
 
- // Obtén la lista de equipos del XML
- var equipos = xmlDoc.querySelectorAll("equipo");
+    // Obtén la lista de equipos del XML
+    var equipos = xmlDoc.querySelectorAll("equipos");
 
- // Itera sobre los equipos y crea las filas de la tabla
- equipos.forEach(function (equipo) {
-   var fila = document.createElement("tr");
-   var logo = document.createElement("td");
-   var nombreEquipo = document.createTextNode(equipo.querySelector("local").textContent);
-   var victorias = document.createElement("td");
-   var empates = document.createElement("td");
-   var derrotas = document.createElement("td");
-   var partidosJugados = document.createElement("td");
-   var puntos = document.createElement("td");
+    // Itera sobre los equipos y crea las filas de la tabla
+    equipos.forEach(function (equipo) {
+      var fila = document.createElement("tr");
 
-   logo.appendChild(nombreEquipo);
-   fila.appendChild(logo);
-   fila.appendChild(partidosJugados);
-   fila.appendChild(victorias);
-   fila.appendChild(empates);
-   fila.appendChild(derrotas);
-   fila.appendChild(puntos);
+      // Nombre del equipo
+      var nombreEquipo = document.createElement("td");
+      nombreEquipo.textContent = equipo.querySelector("local").textContent;
+      fila.appendChild(nombreEquipo);
 
-   tablaBody.appendChild(fila);
+      // Calcula estadísticas
+      var victorias = calcularVictorias(equipo);
+      var empates = calcularEmpates(equipo);
+      var derrotas = calcularDerrotas(equipo);
+      var partidosJugados = victorias + empates + derrotas;
+      var puntos = victorias * 3 + empates;
 
-   // Agrega datos a las celdas
-   partidosJugados.textContent = equipo.querySelectorAll("partido").length;
-   victorias.textContent = calcularVictorias(equipo);
-   empates.textContent = calcularEmpates(equipo);
-   derrotas.textContent = calcularDerrotas(equipo);
-   puntos.textContent = calcularPuntos(equipo);
- });
+      // Agrega datos a las celdas
+      fila.innerHTML += `<td>${victorias}</td>`;
+      fila.innerHTML += `<td>${empates}</td>`;
+      fila.innerHTML += `<td>${derrotas}</td>`;
+      fila.innerHTML += `<td>${partidosJugados}</td>`;
+      fila.innerHTML += `<td>${puntos}</td>`;
 
- // Funciones para calcular estadísticas
- function calcularVictorias(equipo) {
-   // Lógica para calcular victorias
-   return equipo.querySelectorAll("puntoslocal:only-child:not(:empty):not(0)").length;
- }
+      tablaBody.appendChild(fila);
+    });
+  });
 
- function calcularEmpates(equipo) {
-   // Lógica para calcular empates
-   return equipo.querySelectorAll("puntoslocal:not(:empty):not(0):not(:only-child), puntosvisitante:not(:empty):not(0):not(:only-child)").length;
- }
+// Funciones para calcular estadísticas
+function calcularVictorias(equipo) {
+  return equipo.querySelectorAll("puntoslocal:only-child:not(:empty):not(0)").length;
+}
 
- function calcularDerrotas(equipo) {
-   // Lógica para calcular derrotas
-   return equipo.querySelectorAll("puntosvisitante:only-child:not(:empty):not(0)").length;
- }
+function calcularEmpates(equipo) {
+  return equipo.querySelectorAll("puntoslocal:not(:empty):not(0):not(:only-child), puntosvisitante:not(:empty):not(0):not(:only-child)").length;
+}
 
- function calcularPuntos(equipo) {
-   // Lógica para calcular puntos
-   // Puedes adaptar esta lógica según la estructura real de tu XML
-   return equipo.querySelectorAll("puntoslocal, puntosvisitante").length;
- }
+function calcularDerrotas(equipo) {
+  return equipo.querySelectorAll("puntosvisitante:only-child:not(:empty):not(0)").length;
+}
