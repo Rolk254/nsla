@@ -54,9 +54,20 @@ function calcularVictorias(xml) {
     });
 }
 
-function calcularEmpates(equipo) {
-  return equipo.querySelectorAll("puntoslocal:not(:empty):not(0):not(:only-child), puntosvisitante:not(:empty):not(0):not(:only-child)").length;
+function calcularDerrotas(xml) {
+    var equipos = xml.querySelectorAll('equipo');
+
+    equipos.forEach(function (equipo) {
+        var puntosLocal = parseInt(equipo.querySelector('puntoslocal').textContent);
+        var puntosVisitante = parseInt(equipo.querySelector('puntosvisitante').textContent);
+
+        if (puntosLocal < puntosVisitante) {
+            // Lógica para incrementar el contador de derrotas para el equipo...
+        }
+    });
 }
+
+
 
 function calcularDerrotas(equipo) {
   return equipo.querySelectorAll("puntosvisitante:only-child:not(:empty):not(0)").length;
