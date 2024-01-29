@@ -34,32 +34,27 @@
         <section>
           <!-- Tabla de clasificación -->
           <div class="divtabla">
-            <table class="tablaclasi">
-              <thead>
-                <tr>
-                  <th colspan="9" class="titulotabla">Tabla de Clasificación de la NSLA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="columnatabla">
-                  <th></th>
-                  <th title="Partidos Jugados">PJ</th>
-                  <th title="Victorias">V</th>
-                  <th title="Derrotas">D</th>
-                  <th title="Empates">E</th>
-                  <th title="Local">LC</th>
-                  <th title="Visitante">VS</th>
-                  <th title="Puntos Perdidos">PP</th>
-                  <th title="Puntos Conseguidos">PC</th>
-              </tr>
-                <xsl:apply-templates select="equipo">
-                  <xsl:sort select="victorias" order="descending" data-type="number"/>
-                  <xsl:sort select="derrotas" order="ascending" data-type="number"/>
-                  <xsl:sort select="victorias" order="descending" data-type="number"/>
-                  <xsl:sort select="puntos_perdidos" order="ascending" data-type="number"/>
-                </xsl:apply-templates>
-              </tbody>
-            </table>
+            <table id="clasificacionTable" class="tablaclasi">
+                <thead>
+                  <tr>
+                    <th colspan="9" class="titulotabla">Tabla de Clasificación de la NSLA</th>
+                  </tr>
+                  <tr class="columnatabla">
+                    <th></th>
+                    <th title="Partidos Jugados">PJ</th>
+                    <th title="Victorias">V</th>
+                    <th title="Derrotas">D</th>
+                    <th title="Empates">E</th>
+                    <th title="Local">LC</th>
+                    <th title="Visitante">VS</th>
+                    <th title="Puntos Perdidos">PP</th>
+                    <th title="Puntos Conseguidos">PC</th>
+                  </tr>
+                </thead>
+                <tbody id="clasificacionBody">
+                  <!-- Table content will be added dynamically using JavaScript -->
+                </tbody>
+              </table>
           </div>
         </section>
         <footer class="footer">
@@ -83,5 +78,6 @@
             </ul>
           </div>
         </footer>
+        <script src="../scripts/clasificacion.js"></script>
       </body>
     </html>
