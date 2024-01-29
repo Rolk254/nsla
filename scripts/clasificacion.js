@@ -3,7 +3,6 @@ const equiposData = [
     // Agrega más datos de equipos según sea necesario
   ];
 
-  // Función para agregar una fila a la tabla
   function agregarFilaEquipo(equipo, indice) {
     const tablaBody = document.getElementById('tablaBody');
     const fila = document.createElement('tr');
@@ -14,8 +13,6 @@ const equiposData = [
     celda.innerHTML = `<img src="../imagenes/otras/logosequipos/${equipo.nombre}.png" alt="Logo" width="30px"/> ${equipo.nombre}`;
     fila.appendChild(celda);
 
-    // Agrega otras celdas según sea necesario
-    // Ejemplo:
     const columnas = ['partidos_jugados', 'victorias', 'derrotas', 'empates', 'locales', 'visitantes', 'puntos_perdidos', 'puntos_concedidos'];
     columnas.forEach(columna => {
       const celda = document.createElement('td');
@@ -26,7 +23,6 @@ const equiposData = [
     tablaBody.appendChild(fila);
   }
 
-  // Ordena los equipos por victorias y puntos
   equiposData.sort((a, b) => {
     if (a.victorias !== b.victorias) {
       return b.victorias - a.victorias;
@@ -35,7 +31,6 @@ const equiposData = [
     }
   });
 
-  // Agrega las filas a la tabla
   equiposData.forEach((equipo, indice) => {
     agregarFilaEquipo(equipo, indice + 1);
   });
