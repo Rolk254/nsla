@@ -73,8 +73,8 @@ function construirTabla(xml) {
   // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos recibidos por cada equipo
   for (var equipo in partidosJugados) {
     var fila = tbody.insertRow();
-    var celdaNombre = fila.insertCell(0);
-    var celdaImagen = fila.insertCell(0); // Nueva celda para la imagen
+    var celdaNombre = fila.insertCell(1); // Cambiado de 0 a 1
+    var celdaImagen = fila.insertCell(0); // Mantiene la celda para la imagen
     var imagenLocal = `<img src='../imagenes/otras/${equipo}.png'>`;
   
     // Agregar el nombre del equipo a la celda correspondiente
@@ -84,12 +84,13 @@ function construirTabla(xml) {
     celdaImagen.innerHTML = imagenLocal;
   
     // Resto de la información en otras celdas
-    fila.insertCell(1).textContent = partidosJugados[equipo];
-    fila.insertCell(2).textContent = victorias[equipo] || 0;
-    fila.insertCell(3).textContent = derrotas[equipo] || 0;
-    fila.insertCell(4).textContent = empates[equipo] || 0;
-    fila.insertCell(5).textContent = puntosRecibidos[equipo] || 0;
+    fila.insertCell(2).textContent = partidosJugados[equipo];
+    fila.insertCell(3).textContent = victorias[equipo] || 0;
+    fila.insertCell(4).textContent = derrotas[equipo] || 0;
+    fila.insertCell(5).textContent = empates[equipo] || 0;
+    fila.insertCell(6).textContent = puntosRecibidos[equipo] || 0;
   }
+  
 }
 
 // Función para actualizar el contador de partidos jugados, victorias, derrotas o empates para un equipo
