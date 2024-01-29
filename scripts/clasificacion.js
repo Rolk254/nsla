@@ -17,24 +17,39 @@ function construirTabla(xml) {
   // Obtener la referencia al cuerpo de la tabla
   var tbody = document.getElementById('tablaBody');
 
-  // Obtener la lista de equipos del XML
-  var equipos = xml.querySelectorAll('equipos');
+  // Crear un objeto para realizar un seguimiento de los partidos jugados por cada equipo
+  var partidosJugados = {};
 
-  // Iterar sobre los equipos y construir las filas de la tabla
-  equipos.forEach(function (equipo) {
-    var local = equipo.querySelector('local').textContent;
-    var visitante = equipo.querySelector('visitante').textContent;
+  // Obtener la lista de jornadas del XML
+  var jornadas = xml.querySelectorAll('jornada');
 
-    // Añadir equipos solo si no están ya en la lista
-    if (!equipoEnLista(tbody, local)) {
-      var filaLocal = tbody.insertRow();
-      filaLocal.insertCell(0).textContent = local;
-    }
+  // Iterar sobre las jornadas y construir las filas de la tabla
+  jornadas.forEach(function (jornada) {
+    // Obtener la lista de partidos de la jornada
+    var partidos = jornada.querySelectorAll('partido');
 
-    if (!equipoEnLista(tbody, visitante)) {
-      var filaVisitante = tbody.insertRow();
-      filaVisitante.insertCell(0).textContent = visitante;
-    }
+    // Iterar sobre los partidos y actualizar el objeto partidosJugados
+    partidos.forEach(function (partido) {
+      var equipos = partido.querySelectorAll('local, visitante');
+
+      equipos.forEach(function (equipo) {
+        var nombreEquipo = equipo.textContent;
+
+        // Incrementar el contador de partidos jugados para el equipo actual
+        if (partidosJugados[nombreEquipo]) {
+          partidosJugados[nombreEquipo]++;
+        } else {
+          partidosJugados[nombreEquipo] = 1;
+        }
+
+        // Añadir la fila solo si no está ya en la lista
+        if (!equipoEnLista(tbody, nombreEquipo)) {
+          var fila = tbody.insertRow();
+          fila.insertCell(0).textContent = nombreEquipo;
+          fila.insertCell(1).textContent = partidosJugados[nombreEquipo];
+        }
+      });
+    });
   });
 }
 
