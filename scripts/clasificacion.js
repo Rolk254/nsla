@@ -1,5 +1,5 @@
 // Cargar el XML
-var url = '../xm_xs/calendar_t1.xml';
+var url = '../xm_xs/calendar_t2.xml';
 
 fetch(url)
   .then(response => response.text())
