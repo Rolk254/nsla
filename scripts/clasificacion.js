@@ -37,8 +37,13 @@ function construirTabla(xml) {
       var equipos = partido.querySelectorAll('local, visitante');
       var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
 
+
+
+
+
       // Obtener nombres y puntos de los equipos
       var nombreLocal = equipos[0].textContent;
+      var imagenLocal = `<img src='bjvb/jdhvd/${nombreLocal}.png'>`;
       var nombreVisitante = equipos[1].textContent;
       var puntosLocal = parseInt(puntos[0].textContent);
       var puntosVisitante = parseInt(puntos[1].textContent);
@@ -68,7 +73,19 @@ function construirTabla(xml) {
   // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos recibidos por cada equipo
   for (var equipo in partidosJugados) {
     var fila = tbody.insertRow();
-    fila.insertCell(0).textContent = equipo;
+    var celdaNombre = fila.insertCell(0);
+    var celdaImagen = fila.insertCell(0); // Nueva celda para la imagen
+  
+    var nombreLocal = equipo;
+    var imagenLocal = `<img src='../imagenes/otras/${nombreLocal}.png'>`;
+  
+    // Agregar el nombre del equipo a la celda correspondiente
+    celdaNombre.textContent = nombreLocal;
+  
+    // Agregar la imagen a la celda de la imagen
+    celdaImagen.innerHTML = imagenLocal;
+  
+    // Resto de la información en otras celdas
     fila.insertCell(1).textContent = partidosJugados[equipo];
     fila.insertCell(2).textContent = victorias[equipo] || 0;
     fila.insertCell(3).textContent = derrotas[equipo] || 0;
