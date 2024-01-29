@@ -73,7 +73,7 @@ function construirTabla(xml) {
   // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos recibidos por cada equipo
 for (var equipo in partidosJugados) {
   var fila = tbody.insertRow();
-  var imagenLocal = `<img src='../imagenes/otras/logosequipos/${equipo}.png'>`;
+  var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
   console.log(equipo);
   fila.insertCell(0).innerHTML = imagenLocal;
   fila.insertCell(1).textContent = equipo;
