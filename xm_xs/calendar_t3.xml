@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="calendar.xsl"?>
 <temporada2 xsi:noNamespaceSchemaLocation="calendar.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <numtemp>Temporada 2</numtemp>
+    <numtemp>Temporada 3</numtemp>
     <jornada num="1">
         <partido>
             <fecha>Miercoles, 5 de junio</fecha>
