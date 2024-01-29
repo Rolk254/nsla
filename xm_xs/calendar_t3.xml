@@ -103,30 +103,30 @@
             <fecha>Viernes, 28 de junio</fecha>
             <hora>17:15</hora>
             <equipos>
-                <local>Rams</local>
-                <puntoslocal>15</puntoslocal>
-                <visitante>Cardinals</visitante>
-                <puntosvisitante>20</puntosvisitante>
+                <local>Bengals</local>
+                <puntoslocal>?</puntoslocal>
+                <visitante>Raiders</visitante>
+                <puntosvisitante>?</puntosvisitante>
             </equipos>
         </partido>
         <partido>
             <fecha>Sabado, 29 de junio</fecha>
             <hora>18:45</hora>
             <equipos>
-                <local>Cowboys</local>
-                <puntoslocal>25</puntoslocal>
-                <visitante>Raiders</visitante>
-                <puntosvisitante>30</puntosvisitante>
+                <local>Steelers</local>
+                <puntoslocal>?</puntoslocal>
+                <visitante>Rams</visitante>
+                <puntosvisitante>?</puntosvisitante>
             </equipos>
         </partido>
         <partido>
             <fecha>Domingo, 30 de junio</fecha>
             <hora>20:30</hora>
             <equipos>
-                <local>Steelers</local>
-                <puntoslocal>35</puntoslocal>
-                <visitante>Bengals</visitante>
-                <puntosvisitante>40</puntosvisitante>
+                <local>Cardinals</local>
+                <puntoslocal>?</puntoslocal>
+                <visitante>Cowboys</visitante>
+                <puntosvisitante>?</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
