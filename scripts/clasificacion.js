@@ -35,31 +35,21 @@ function construirTabla(xml) {
       equipos.forEach(function (equipo) {
         var nombreEquipo = equipo.textContent;
 
-        // Incrementar el contador de partidos jugados para el equipo actual
-        if (partidosJugados[nombreEquipo]) {
-          partidosJugados[nombreEquipo]++;
-        } else {
-          partidosJugados[nombreEquipo] = 1;
+        // Añadir el equipo al objeto partidosJugados si aún no está presente
+        if (!partidosJugados[nombreEquipo]) {
+          partidosJugados[nombreEquipo] = 0;
         }
 
-        // Añadir la fila solo si no está ya en la lista
-        if (!equipoEnLista(tbody, nombreEquipo)) {
-          var fila = tbody.insertRow();
-          fila.insertCell(0).textContent = nombreEquipo;
-          fila.insertCell(1).textContent = partidosJugados[nombreEquipo];
-        }
+        // Incrementar el contador de partidos jugados para el equipo actual
+        partidosJugados[nombreEquipo]++;
       });
     });
   });
-}
 
-// Función auxiliar para verificar si un equipo ya está en la lista
-function equipoEnLista(tbody, nombreEquipo) {
-  var filas = tbody.getElementsByTagName('tr');
-  for (var i = 0; i < filas.length; i++) {
-    if (filas[i].getElementsByTagName('td')[0].textContent === nombreEquipo) {
-      return true;
-    }
+  // Agregar las filas a la tabla con el número de partidos jugados por cada equipo
+  for (var equipo in partidosJugados) {
+    var fila = tbody.insertRow();
+    fila.insertCell(0).textContent = equipo;
+    fila.insertCell(1).textContent = partidosJugados[equipo];
   }
-  return false;
 }
