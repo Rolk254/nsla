@@ -37,13 +37,9 @@ function construirTabla(xml) {
       var equipos = partido.querySelectorAll('local, visitante');
       var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
 
-
-
-
-
       // Obtener nombres y puntos de los equipos
       var nombreLocal = equipos[0].textContent;
-      var imagenLocal = `<img src='bjvb/jdhvd/${nombreLocal}.png'>`;
+      var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${nombreLocal}.png'>`;
       var nombreVisitante = equipos[1].textContent;
       var puntosLocal = parseInt(puntos[0].textContent);
       var puntosVisitante = parseInt(puntos[1].textContent);
@@ -71,19 +67,41 @@ function construirTabla(xml) {
   });
 
   // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos recibidos por cada equipo
-for (var equipo in partidosJugados) {
-  var fila = tbody.insertRow();
-  var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
-  console.log(equipo);
-  fila.insertCell(0).innerHTML = imagenLocal;
-  fila.insertCell(1).textContent = equipo;
-  fila.insertCell(2).textContent = partidosJugados[equipo];
-  fila.insertCell(3).textContent = victorias[equipo] || 0;
-  fila.insertCell(4).textContent = derrotas[equipo] || 0;
-  fila.insertCell(5).textContent = empates[equipo] || 0;
-  fila.insertCell(6).textContent = puntosRecibidos[equipo] || 0;
-}
+  var filas = [];
 
+  for (var equipo in partidosJugados) {
+    var fila = document.createElement('tr');
+    var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
+    fila.insertCell(0).innerHTML = imagenLocal;
+    fila.insertCell(1).textContent = equipo;
+    fila.insertCell(2).textContent = partidosJugados[equipo];
+    fila.insertCell(3).textContent = victorias[equipo] || 0;
+    fila.insertCell(4).textContent = derrotas[equipo] || 0;
+    fila.insertCell(5).textContent = empates[equipo] || 0;
+    fila.insertCell(6).textContent = puntosRecibidos[equipo] || 0;
+    filas.push(fila);
+  }
+
+  // Función para comparar filas y ordenarlas
+  function compararFilas(a, b) {
+    if (parseInt(b.cells[3].textContent) - parseInt(a.cells[3].textContent) !== 0) {
+      return parseInt(b.cells[3].textContent) - parseInt(a.cells[3].textContent);
+    } else if (parseInt(b.cells[4].textContent) - parseInt(a.cells[4].textContent) !== 0) {
+      return parseInt(b.cells[4].textContent) - parseInt(a.cells[4].textContent);
+    } else if (parseInt(b.cells[5].textContent) - parseInt(a.cells[5].textContent) !== 0) {
+      return parseInt(b.cells[5].textContent) - parseInt(a.cells[5].textContent);
+    } else {
+      return parseInt(b.cells[6].textContent) - parseInt(a.cells[6].textContent);
+    }
+  }
+
+  // Ordenar el array de filas
+  filas.sort(compararFilas);
+
+  // Agregar las filas ordenadas al cuerpo de la tabla
+  filas.forEach(function(fila) {
+    tbody.appendChild(fila);
+  });
 }
 
 // Función para actualizar el contador de partidos jugados, victorias, derrotas o empates para un equipo
