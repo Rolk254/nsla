@@ -132,53 +132,54 @@
     </jornada>    
     <jornada num="5">
         <partido>
-            <fecha>Lunes, 26 de marzo</fecha>
-            <hora>16:45</hora>
+            <fecha>Viernes, 5 de julio</fecha>
+            <hora>17:15</hora>
             <equipos>
-                <local>Rams</local>
-                <puntoslocal>10</puntoslocal>
-                <visitante>Steelers</visitante>
-                <puntosvisitante>15</puntosvisitante>
+                <local>Raiders</local>
+                <puntoslocal>25</puntoslocal>
+                <visitante>Cardinals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
         <partido>
-            <fecha>Martes, 27 de marzo</fecha>
-            <hora>18:15</hora>
+            <fecha>Sabado, 6 de julio</fecha>
+            <hora>18:45</hora>
             <equipos>
                 <local>Bengals</local>
-                <puntoslocal>20</puntoslocal>
-                <visitante>Cardinals</visitante>
-                <puntosvisitante>25</puntosvisitante>
+                <puntoslocal>35</puntoslocal>
+                <visitante>Cowboys</visitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
-            <fecha>Jueves, 29 de marzo</fecha>
-            <hora>21:15</hora>
+            <fecha>Domingo, 7 de julio</fecha>
+            <hora>20:30</hora>
             <equipos>
-                <local>Cowboys</local>
-                <puntoslocal>40</puntoslocal>
-                <visitante>Raiders</visitante>
-                <puntosvisitante>45</puntosvisitante>
+                <local>Steelers</local>
+                <puntoslocal>25</puntoslocal>
+                <visitante>Rams</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
     <jornada num="6">
         <partido>
-            <fecha>Lunes, 9 de abril</fecha>
+            <fecha>Viernes, 12 de julio</fecha>
             <hora>16:45</hora>
             <equipos>
-                <local>Steelers</local>
+                <local>Cardinals</local>
                 <puntoslocal>15</puntoslocal>
-                <visitante>Rams</visitante>
+                <visitante>Raiders</visitante>
                 <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
-            <fecha>Martes, 10 de abril</fecha>
+            <fecha>Sabado, 13 de julio</fecha>
             <hora>18:15</hora>
             <equipos>
-                <local>Cardinals</local>
+                <local>Cowboys</local>
                 <puntoslocal>25</puntoslocal>
+                
                 <visitante>Bengals</visitante>
                 <puntosvisitante>30</puntosvisitante>
             </equipos>
