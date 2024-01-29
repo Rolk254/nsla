@@ -152,16 +152,6 @@
             </equipos>
         </partido>
         <partido>
-            <fecha>Miércoles, 28 de marzo</fecha>
-            <hora>19:45</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>30</puntoslocal>
-                <visitante>Bears</visitante>
-                <puntosvisitante>35</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
             <fecha>Jueves, 29 de marzo</fecha>
             <hora>21:15</hora>
             <equipos>
@@ -191,16 +181,6 @@
                 <puntoslocal>25</puntoslocal>
                 <visitante>Bengals</visitante>
                 <puntosvisitante>30</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Miércoles, 11 de abril</fecha>
-            <hora>19:45</hora>
-            <equipos>
-                <local>Bears</local>
-                <puntoslocal>35</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -241,18 +221,8 @@
             <equipos>
                 <local>Bengals</local>
                 <puntoslocal>35</puntoslocal>
-                <visitante>Bears</visitante>
-                <puntosvisitante>40</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 26 de abril</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>15</puntoslocal>
                 <visitante>Steelers</visitante>
-                <puntosvisitante>20</puntosvisitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
@@ -281,20 +251,10 @@
             <fecha>Miércoles, 2 de mayo</fecha>
             <hora>19:30</hora>
             <equipos>
-                <local>Bears</local>
+                <local>Steelers</local>
                 <puntoslocal>20</puntoslocal>
                 <visitante>Bengals</visitante>
                 <puntosvisitante>25</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 3 de mayo</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Steelers</local>
-                <puntoslocal>30</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
@@ -305,7 +265,7 @@
             <equipos>
                 <local>Cardinals</local>
                 <puntoslocal>15</puntoslocal>
-                <visitante>Bears</visitante>
+                <visitante>Bengals</visitante>
                 <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
@@ -329,23 +289,13 @@
                 <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
-        <partido>
-            <fecha>Jueves, 10 de mayo</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Bengals</local>
-                <puntoslocal>15</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>20</puntosvisitante>
-            </equipos>
-        </partido>
     </jornada>    
     <jornada num="10">
         <partido>
             <fecha>Lunes, 14 de mayo</fecha>
             <hora>16:30</hora>
             <equipos>
-                <local>Bears</local>
+                <local>Bengals</local>
                 <puntoslocal>20</puntoslocal>
                 <visitante>Cardinals</visitante>
                 <puntosvisitante>25</puntosvisitante>
@@ -369,16 +319,6 @@
                 <puntoslocal>15</puntoslocal>
                 <visitante>Cowboys</visitante>
                 <puntosvisitante>20</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 17 de mayo</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>25</puntoslocal>
-                <visitante>Bengals</visitante>
-                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
