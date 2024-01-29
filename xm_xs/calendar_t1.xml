@@ -101,6 +101,7 @@
     </jornada>
     
     <jornada num="4">
+        <!-- Eliminamos el cuarto partido extra -->
         <partido>
             <fecha>Martes, 7 de noviembre</fecha>
             <hora>17:15</hora>
@@ -154,16 +155,6 @@
             </equipos>
         </partido>
         <partido>
-            <fecha>Miércoles, 22 de noviembre</fecha>
-            <hora>19:45</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>15</puntoslocal>
-                <visitante>Bears</visitante>
-                <puntosvisitante>20</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
             <fecha>Jueves, 23 de noviembre</fecha>
             <hora>21:15</hora>
             <equipos>
@@ -194,16 +185,6 @@
                 <puntoslocal>25</puntoslocal>
                 <visitante>Bengals</visitante>
                 <puntosvisitante>30</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Miércoles, 6 de diciembre</fecha>
-            <hora>19:45</hora>
-            <equipos>
-                <local>Bears</local>
-                <puntoslocal>35</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -246,18 +227,8 @@
             <equipos>
                 <local>Bengals</local>
                 <puntoslocal>35</puntoslocal>
-                <visitante>Bears</visitante>
-                <puntosvisitante>40</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 14 de diciembre</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>15</puntoslocal>
                 <visitante>Steelers</visitante>
-                <puntosvisitante>20</puntosvisitante>
+                <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -277,7 +248,7 @@
             <fecha>Martes, 19 de diciembre</fecha>
             <hora>18:00</hora>
             <equipos>
-                <local>Cardinals</local>
+                <local>Bengals</local>
                 <puntoslocal>35</puntoslocal>
                 <visitante>Raiders</visitante>
                 <puntosvisitante>40</puntosvisitante>
@@ -287,20 +258,10 @@
             <fecha>Miércoles, 20 de diciembre</fecha>
             <hora>19:30</hora>
             <equipos>
-                <local>Bears</local>
+                <local>Cardinals</local>
                 <puntoslocal>20</puntoslocal>
                 <visitante>Bengals</visitante>
                 <puntosvisitante>25</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 21 de diciembre</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Steelers</local>
-                <puntoslocal>30</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -313,7 +274,7 @@
             <equipos>
                 <local>Cardinals</local>
                 <puntoslocal>15</puntoslocal>
-                <visitante>Bears</visitante>
+                <visitante>Bengals</visitante>
                 <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
@@ -337,16 +298,6 @@
                 <puntosvisitante>40</puntosvisitante>
             </equipos>
         </partido>
-        <partido>
-            <fecha>Jueves, 23 de diciembre</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Bengals</local>
-                <puntoslocal>15</puntoslocal>
-                <visitante>Chiefs</visitante>
-                <puntosvisitante>20</puntosvisitante>
-            </equipos>
-        </partido>
     </jornada>
 
     <!-- Jornada 10 -->
@@ -355,7 +306,7 @@
             <fecha>Lunes, 27 de diciembre</fecha>
             <hora>16:30</hora>
             <equipos>
-                <local>Bears</local>
+                <local>Bengals</local>
                 <puntoslocal>20</puntoslocal>
                 <visitante>Cardinals</visitante>
                 <puntosvisitante>25</puntosvisitante>
@@ -379,16 +330,6 @@
                 <puntoslocal>15</puntoslocal>
                 <visitante>Cowboys</visitante>
                 <puntosvisitante>20</puntosvisitante>
-            </equipos>
-        </partido>
-        <partido>
-            <fecha>Jueves, 30 de diciembre</fecha>
-            <hora>21:00</hora>
-            <equipos>
-                <local>Chiefs</local>
-                <puntoslocal>25</puntoslocal>
-                <visitante>Bengals</visitante>
-                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
