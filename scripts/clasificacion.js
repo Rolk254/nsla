@@ -22,7 +22,7 @@ function construirTabla(xml) {
   var victorias = {};
   var derrotas = {};
   var empates = {};
-  var puntosTotales = {};
+  var puntosRecibidos = {};
 
   // Obtener la lista de jornadas del XML
   var jornadas = xml.querySelectorAll('jornada');
@@ -32,7 +32,7 @@ function construirTabla(xml) {
     // Obtener la lista de partidos de la jornada
     var partidos = jornada.querySelectorAll('partido');
 
-    // Iterar sobre los partidos y actualizar los objetos partidosJugados, victorias, derrotas, empates y puntosTotales
+    // Iterar sobre los partidos y actualizar los objetos partidosJugados, victorias, derrotas, empates y puntosRecibidos
     partidos.forEach(function (partido) {
       var equipos = partido.querySelectorAll('local, visitante');
       var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
@@ -47,7 +47,7 @@ function construirTabla(xml) {
       actualizarContador(partidosJugados, nombreLocal);
       actualizarContador(partidosJugados, nombreVisitante);
 
-      // Determinar el resultado del partido y actualizar victorias, derrotas, empates y puntosTotales
+      // Determinar el resultado del partido y actualizar victorias, derrotas, empates y puntosRecibidos
       if (puntosLocal > puntosVisitante) {
         actualizarContador(victorias, nombreLocal);
         actualizarContador(derrotas, nombreVisitante);
@@ -59,13 +59,13 @@ function construirTabla(xml) {
         actualizarContador(empates, nombreVisitante);
       }
 
-      // Actualizar puntos totales para ambos equipos
-      actualizarPuntosTotales(puntosTotales, nombreLocal, puntosLocal);
-      actualizarPuntosTotales(puntosTotales, nombreVisitante, puntosVisitante);
+      // Actualizar puntos recibidos para el equipo local y visitante
+      actualizarPuntosRecibidos(puntosRecibidos, nombreLocal, puntosVisitante);
+      actualizarPuntosRecibidos(puntosRecibidos, nombreVisitante, puntosLocal);
     });
   });
 
-  // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos totales por cada equipo
+  // Agregar las filas a la tabla con el número de partidos jugados, victorias, derrotas, empates y puntos recibidos por cada equipo
   for (var equipo in partidosJugados) {
     var fila = tbody.insertRow();
     fila.insertCell(0).textContent = equipo;
@@ -73,7 +73,7 @@ function construirTabla(xml) {
     fila.insertCell(2).textContent = victorias[equipo] || 0;
     fila.insertCell(3).textContent = derrotas[equipo] || 0;
     fila.insertCell(4).textContent = empates[equipo] || 0;
-    fila.insertCell(5).textContent = puntosTotales[equipo] || 0;
+    fila.insertCell(5).textContent = puntosRecibidos[equipo] || 0;
   }
 }
 
@@ -85,10 +85,10 @@ function actualizarContador(contador, equipo) {
   contador[equipo]++;
 }
 
-// Función para actualizar los puntos totales para un equipo
-function actualizarPuntosTotales(puntosTotales, equipo, puntos) {
-  if (!puntosTotales[equipo]) {
-    puntosTotales[equipo] = 0;
+// Función para actualizar los puntos recibidos para un equipo
+function actualizarPuntosRecibidos(puntosRecibidos, equipo, puntos) {
+  if (!puntosRecibidos[equipo]) {
+    puntosRecibidos[equipo] = 0;
   }
-  puntosTotales[equipo] += puntos;
+  puntosRecibidos[equipo] += puntos;
 }
