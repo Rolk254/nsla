@@ -1,83 +1,63 @@
-const partidosData = [
-    { local: 'Cardinals', visitante: 'Cowboys', puntos_local: 25, puntos_visitante: 45 },
-    { local: 'Raiders', visitante: 'Steelers', puntos_local: 20, puntos_visitante: 35 },
-    { local: 'Bengals', visitante: 'Rams', puntos_local: 40, puntos_visitante: 30 },
-    // Agrega más datos de partidos según sea necesario
-  ];
+ // Datos del XML (reemplaza este string con el contenido de tu XML)
+ var xmlString = `...`; // Copia aquí el contenido de tu XML
 
-  // Inicialización de datos de equipos con valores predeterminados
-  const equiposData = partidosData.reduce((equipos, partido) => {
-    if (!equipos.find(equipo => equipo.nombre === partido.local)) {
-      equipos.push({ nombre: partido.local, partidos_jugados: 0, victorias: 0, derrotas: 0, empates: 0, locales: 0, visitantes: 0, puntos_perdidos: 0, puntos_concedidos: 0 });
-    }
-    if (!equipos.find(equipo => equipo.nombre === partido.visitante)) {
-      equipos.push({ nombre: partido.visitante, partidos_jugados: 0, victorias: 0, derrotas: 0, empates: 0, locales: 0, visitantes: 0, puntos_perdidos: 0, puntos_concedidos: 0 });
-    }
-    return equipos;
-  }, []);
+ // Crear un nuevo objeto DOMParser
+ var parser = new DOMParser();
+ var xmlDoc = parser.parseFromString(xmlString, "text/xml");
 
-  // Actualización de datos de equipos con resultados de partidos
-  partidosData.forEach(partido => {
-    const equipoLocal = equiposData.find(equipo => equipo.nombre === partido.local);
-    const equipoVisitante = equiposData.find(equipo => equipo.nombre === partido.visitante);
+ // Obtén la referencia al tbody
+ var tablaBody = document.getElementById("tablaBody");
 
-    equipoLocal.partidos_jugados += 1;
-    equipoVisitante.partidos_jugados += 1;
+ // Obtén la lista de equipos del XML
+ var equipos = xmlDoc.querySelectorAll("equipo");
 
-    equipoLocal.puntos_perdidos += partido.puntos_local;
-    equipoVisitante.puntos_perdidos += partido.puntos_visitante;
+ // Itera sobre los equipos y crea las filas de la tabla
+ equipos.forEach(function (equipo) {
+   var fila = document.createElement("tr");
+   var logo = document.createElement("td");
+   var nombreEquipo = document.createTextNode(equipo.querySelector("local").textContent);
+   var victorias = document.createElement("td");
+   var empates = document.createElement("td");
+   var derrotas = document.createElement("td");
+   var partidosJugados = document.createElement("td");
+   var puntos = document.createElement("td");
 
-    equipoLocal.puntos_concedidos += partido.puntos_visitante;
-    equipoVisitante.puntos_concedidos += partido.puntos_local;
+   logo.appendChild(nombreEquipo);
+   fila.appendChild(logo);
+   fila.appendChild(partidosJugados);
+   fila.appendChild(victorias);
+   fila.appendChild(empates);
+   fila.appendChild(derrotas);
+   fila.appendChild(puntos);
 
-    if (partido.puntos_local > partido.puntos_visitante) {
-      equipoLocal.victorias += 1;
-      equipoVisitante.derrotas += 1;
-    } else if (partido.puntos_local < partido.puntos_visitante) {
-      equipoVisitante.victorias += 1;
-      equipoLocal.derrotas += 1;
-    } else {
-      equipoLocal.empates += 1;
-      equipoVisitante.empates += 1;
-    }
+   tablaBody.appendChild(fila);
 
-    if (partido.local === partido.visitante) {
-      equipoLocal.locales += 1;
-      equipoVisitante.visitantes += 1;
-    }
-  });
+   // Agrega datos a las celdas
+   partidosJugados.textContent = equipo.querySelectorAll("partido").length;
+   victorias.textContent = calcularVictorias(equipo);
+   empates.textContent = calcularEmpates(equipo);
+   derrotas.textContent = calcularDerrotas(equipo);
+   puntos.textContent = calcularPuntos(equipo);
+ });
 
-  // Función para agregar una fila de equipo a la tabla
-  function agregarFilaEquipo(equipo, indice) {
-    const tablaBody = document.getElementById('tablaBody');
-    const fila = document.createElement('tr');
-    fila.classList.add('celdatabla');
+ // Funciones para calcular estadísticas
+ function calcularVictorias(equipo) {
+   // Lógica para calcular victorias
+   return equipo.querySelectorAll("puntoslocal:only-child:not(:empty):not(0)").length;
+ }
 
-    const celda = document.createElement('td');
-    celda.classList.add('columnatabla');
-    celda.innerHTML = `<img src="../imagenes/otras/logosequipos/${equipo.nombre}.png" alt="Logo" width="30px"/> ${equipo.nombre}`;
-    fila.appendChild(celda);
+ function calcularEmpates(equipo) {
+   // Lógica para calcular empates
+   return equipo.querySelectorAll("puntoslocal:not(:empty):not(0):not(:only-child), puntosvisitante:not(:empty):not(0):not(:only-child)").length;
+ }
 
-    const columnas = ['partidos_jugados', 'victorias', 'derrotas', 'empates', 'locales', 'visitantes', 'puntos_perdidos', 'puntos_concedidos'];
-    columnas.forEach(columna => {
-      const celda = document.createElement('td');
-      celda.textContent = equipo[columna];
-      fila.appendChild(celda);
-    });
+ function calcularDerrotas(equipo) {
+   // Lógica para calcular derrotas
+   return equipo.querySelectorAll("puntosvisitante:only-child:not(:empty):not(0)").length;
+ }
 
-    tablaBody.appendChild(fila);
-  }
-
-  // Ordenar equipos por victorias y puntos
-  equiposData.sort((a, b) => {
-    if (a.victorias !== b.victorias) {
-      return b.victorias - a.victorias;
-    } else {
-      return (b.puntos_perdidos + b.puntos_concedidos) - (a.puntos_perdidos + a.puntos_concedidos);
-    }
-  });
-
-  // Agregar filas de equipos a la tabla
-  equiposData.forEach((equipo, indice) => {
-    agregarFilaEquipo(equipo, indice + 1);
-  });
+ function calcularPuntos(equipo) {
+   // Lógica para calcular puntos
+   // Puedes adaptar esta lógica según la estructura real de tu XML
+   return equipo.querySelectorAll("puntoslocal, puntosvisitante").length;
+ }
