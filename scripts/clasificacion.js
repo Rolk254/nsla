@@ -69,3 +69,4 @@ function actualizarContador(contador, equipo) {
   }
   contador[equipo]++;
 }
+c
