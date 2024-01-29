@@ -75,12 +75,10 @@ function construirTabla(xml) {
     var fila = tbody.insertRow();
     var celdaNombre = fila.insertCell(0);
     var celdaImagen = fila.insertCell(0); // Nueva celda para la imagen
-  
-    var nombreLocal = equipo;
-    var imagenLocal = `<img src='../imagenes/otras/${nombreLocal}.png'>`;
+    var imagenLocal = `<img src='../imagenes/otras/${equipo}.png'>`;
   
     // Agregar el nombre del equipo a la celda correspondiente
-    celdaNombre.textContent = nombreLocal;
+    celdaNombre.textContent = equipo;
   
     // Agregar la imagen a la celda de la imagen
     celdaImagen.innerHTML = imagenLocal;
