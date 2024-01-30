@@ -80,9 +80,7 @@ function construirTabla(xml) {
     var fila = document.createElement('tr');
     var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
 
-
-    const list = equipo.classList;
-    list.add(`${equipo}`);
+    equipo.classList.add(`${equipo}`);
     
 
 
