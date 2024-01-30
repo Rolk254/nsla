@@ -821,7 +821,7 @@ details[open] .toggle-summary .toggle-button {
   margin: 0;
 }
 .jugador{
-  padding: 15px;
+  padding: 200px;
   border-radius: 10px; 
   background: linear-gradient(to border-bottom-right-radius, rgba(0,58,116,1), black);
 }
