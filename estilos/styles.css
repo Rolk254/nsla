@@ -839,6 +839,7 @@ details[open] .toggle-summary .toggle-button {
 
 .fotoequipos {
   width: 100%;
+  border-radius: 16px;
 }
 
 /*Estilos pagina noticias*/
