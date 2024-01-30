@@ -124,9 +124,9 @@
             <hora>20:30</hora>
             <equipos>
                 <local>Cardinals</local>
-                <puntoslocal>?</puntoslocal>
+                <puntoslocal></puntoslocal>
                 <visitante>Cowboys</visitante>
-                <puntosvisitante>?</puntosvisitante>
+                <puntosvisitante></puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
