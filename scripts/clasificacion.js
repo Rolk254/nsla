@@ -80,7 +80,7 @@ function construirTabla(xml) {
     var fila = document.createElement('tr');
     var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
     var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
-    fila.insertCell(0).innerHTML = imagenLocal;
+    //fila.insertCell(0).innerHTML = imagenLocal;
     //fila.insertCell(1).textContent = equipo;
     var tdImagen = fila.insertCell(1);
    tdImagen.innerHTML = imagenLocal;
