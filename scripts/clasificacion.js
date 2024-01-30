@@ -82,7 +82,7 @@ function construirTabla(xml) {
     var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
     var tdLogito = fila.insertCell(0);
     tdLogito.innerHTML = imagenLocal;
-    tdLogito.classList.add('logito-claseEquipo');
+    tdLogito.classList.add('logito `${claseEquipo}`');
     fila.insertCell(1).textContent = equipo;
     fila.insertCell(2).textContent = partidosJugados[equipo];
     fila.insertCell(3).textContent = victorias[equipo] || 0;
