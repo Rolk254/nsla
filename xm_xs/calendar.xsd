@@ -16,9 +16,9 @@
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="local" type="xs:string" />
-                          <xs:element name="puntoslocal" type="xs:unsignedByte" />
+                          <xs:element name="puntoslocal" type="xs:interger" />
                           <xs:element name="visitante" type="xs:string" />
-                          <xs:element name="puntosvisitante" type="xs:unsignedByte" />
+                          <xs:element name="puntosvisitante" type="xs:interger" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
