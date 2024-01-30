@@ -96,7 +96,7 @@
             <h4><u>LB</u></h4>
               <div class="divjugadores">
                 <xsl:for-each select="jugadores/LB/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
@@ -105,7 +105,7 @@
             <h4><u>SAF</u></h4>
             <div class="divjugadores">
               <xsl:for-each select="jugadores/SAF/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
@@ -114,7 +114,7 @@
             <h4><u>WR</u></h4>
             <div class="divjugadores">
               <xsl:for-each select="jugadores/WR/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
@@ -123,7 +123,7 @@
             <h4><u>CB</u></h4>
             <div class="divjugadores">
               <xsl:for-each select="jugadores/CB/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
@@ -132,7 +132,7 @@
             <h4><u>QB</u></h4>
             <div class="divjugadores">
               <xsl:for-each select="jugadores/QB/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
@@ -141,7 +141,7 @@
             <h4><u>DT</u></h4>
             <div class="divjugadores">
               <xsl:for-each select="jugadores/DT/jugador">
-                  <div>
+                  <div class="jugador">
                     <img class="fotoequipos" src="{imagen}" alt="{nombre}"/>
                     <p><xsl:value-of select="nombre"/></p>
                   </div>
