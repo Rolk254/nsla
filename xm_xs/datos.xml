@@ -5,9 +5,7 @@
     <nombreequipo>
      <nombre>Cardinals</nombre>
     </nombreequipo>
-    <escudo>
-        ../imagenes/otras/logosequipos/Cardinals.png
-    </escudo>
+    <escudo>../imagenes/otras/logosequipos/Cardinals.png</escudo>
     <entrenador>
      <nombre>Jonathan Gannon</nombre>
      <imagen>../imagenes\otras\ganon.png</imagen>
