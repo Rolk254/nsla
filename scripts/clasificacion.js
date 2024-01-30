@@ -80,7 +80,9 @@ function construirTabla(xml) {
     var fila = document.createElement('tr');
     var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
     var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
-    fila.insertCell(0).innerHTML = imagenLocal;
+    var tdLogito = fila.insertCell(0);
+    tdLogito.innerHTML = imagenLocal;
+    tdLogito.classList.add('logito-fondo');
     fila.insertCell(1).textContent = equipo;
     fila.insertCell(2).textContent = partidosJugados[equipo];
     fila.insertCell(3).textContent = victorias[equipo] || 0;
