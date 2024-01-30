@@ -701,7 +701,7 @@ label h3{
 /*Colores equipos*/
 .bears{
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(2,0,36,1) 100%);
-  color: black;
+  color: white;
 }
 .chiefs{
   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 100%);
@@ -713,7 +713,7 @@ label h3{
 }
 .bengals{
   background: linear-gradient(90deg, rgba(255,115,0,1) 0%, rgba(0,0,0,1) 100%);
-  color: black;
+  color: white;
 }
 .steelers{
   background: linear-gradient(90deg, rgba(0,143,57,1) 0%, rgba(255,255,255,1) 100%);
@@ -721,7 +721,7 @@ label h3{
 }
 .raiders{
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
-  color: black;
+  color: white;
 }
 .cowboys{
   background: linear-gradient(90deg, rgba(0,34,68,1) 0%, rgba(255,255,255,1) 100%);

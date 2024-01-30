@@ -78,7 +78,7 @@ function construirTabla(xml) {
 
   for (var equipo in partidosJugados) {
     var fila = document.createElement('tr');
-    var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
+    var imagenLocal = `<img class="logito claseEquipo" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
     var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
     fila.insertCell(0).innerHTML = imagenLocal;
     //fila.insertCell(1).textContent = equipo;
