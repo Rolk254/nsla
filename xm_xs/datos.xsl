@@ -27,8 +27,8 @@
           <input type="checkbox" id="toggle"/>
           <div class="navbar">
             <a href="../index.html">Inicio</a>
-            <a href="../xm_xs/calendario.xml">Calendario</a>
-            <a href="../xm_xs/clasi.xml">Clasificación</a>
+            <a href="../xm_xs/calendar_t3.xml">Calendario</a>
+            <a href="../paginas/clasi.html">Clasificación</a>
             <a id="active" href="datos.xml">Equipos</a>
             <a href="../paginas/noticias.html">Noticias</a>
             <a href="../paginas/contacto.html">Contacto</a>
