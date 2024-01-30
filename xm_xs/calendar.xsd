@@ -1,24 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="temporada">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="numtemp" type="xs:string" />
-        <xs:element maxOccurs="unbounded" name="jornada">
+        <xs:element type="xs:string" name="numtemp"/>
+        <xs:element name="jornada" maxOccurs="unbounded" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation> Datos de las jornadas  Jornada 6  Jornada 7  Jornada 8  Jornada 9  Jornada 10 </xs:documentation>
+          </xs:annotation>
           <xs:complexType>
             <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="partido">
+              <xs:element name="partido" maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation> Eliminamos el cuarto partido extra </xs:documentation>
+                </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="fecha" type="xs:string" />
-                    <xs:element name="hora" type="xs:string" />
+                    <xs:element type="xs:string" name="fecha"/>
+                    <xs:element type="xs:string" name="hora"/>
                     <xs:element name="equipos">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="local" type="xs:string" />
-                          <xs:element name="puntoslocal" type="xs:interger" />
-                          <xs:element name="visitante" type="xs:string" />
-                          <xs:element name="puntosvisitante" type="xs:interger" />
+                          <xs:element type="xs:string" name="local"/>
+                          <xs:element type="xs:byte" name="puntoslocal"/>
+                          <xs:element type="xs:string" name="visitante"/>
+                          <xs:element type="xs:byte" name="puntosvisitante"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -26,7 +31,7 @@
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="num" type="xs:unsignedByte" use="required" />
+            <xs:attribute type="xs:byte" name="num" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
