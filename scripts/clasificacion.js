@@ -78,15 +78,16 @@ function construirTabla(xml) {
 
   for (var equipo in partidosJugados) {
     var fila = document.createElement('tr');
-    var imagenLocal = `<img class="logito claseEquipo" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
+    var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'>`;
     var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
     fila.insertCell(0).innerHTML = imagenLocal;
     //fila.insertCell(1).textContent = equipo;
-    var tdEquipo = fila.insertCell(1);
-   tdEquipo.textContent = equipo;
+    var tdImagen = fila.insertCell(1);
+   tdImagen.innerHTML = imagenLocal;
 
   // Agregar una clase al <td> correspondiente al equipo
-    tdEquipo.classList.add(claseEquipo); 
+    tdImagen.classList.add(claseEquipo); 
+    fila.insertCell(1).textContent = equipo;
     fila.insertCell(2).textContent = partidosJugados[equipo];
     fila.insertCell(3).textContent = victorias[equipo] || 0;
     fila.insertCell(4).textContent = derrotas[equipo] || 0;
