@@ -82,7 +82,8 @@ function construirTabla(xml) {
 
 
     const list = equipo.classList;
-    list.add("${equipo}");
+    list.add(`${equipo}`);
+    
 
 
     fila.insertCell(0).innerHTML = imagenLocal;
