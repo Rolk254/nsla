@@ -41,8 +41,8 @@ function construirTabla(xml) {
       var nombreLocal = equipos[0].textContent;
       var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${nombreLocal}.png'>`;
       var nombreVisitante = equipos[1].textContent;
-      var puntosLocal = parseInt(puntos[0].textContent);
-      var puntosVisitante = parseInt(puntos[1].textContent);
+      var puntosLocal = isNaN(parseInt(puntos[0].textContent)) ? 0 : parseInt(puntos[0].textContent);
+      var puntosVisitante = isNaN(parseInt(puntos[1].textContent)) ? 0 : parseInt(puntos[1].textContent);
 
       // Actualizar partidos jugados para ambos equipos
       actualizarContador(partidosJugados, nombreLocal);
