@@ -83,7 +83,6 @@ function construirTabla(xml) {
 
     // Agregar la clase al elemento de la fila con el nombre del equipo en minúscula
     fila.classList.add(claseEquipo);
-    fila.classList.add(`${equipo}`);
     fila.insertCell(0).innerHTML = imagenLocal;
     fila.insertCell(1).textContent = equipo;
     fila.insertCell(2).textContent = partidosJugados[equipo];
