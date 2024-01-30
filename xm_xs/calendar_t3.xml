@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="calendar.xsl"?>
-<temporada xsi:noNamespaceSchemaLocation="calendar.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<temporada2 xsi:noNamespaceSchemaLocation="calendar.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <numtemp>Temporada 3</numtemp>
     <jornada num="1">
         <partido>
@@ -323,4 +323,4 @@
             </equipos>
         </partido>
     </jornada>    
-</temporada>
+</temporada2>
