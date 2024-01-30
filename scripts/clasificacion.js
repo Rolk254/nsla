@@ -36,33 +36,40 @@ function construirTabla(xml) {
     partidos.forEach(function (partido) {
       var equipos = partido.querySelectorAll('local, visitante');
       var puntos = partido.querySelectorAll('puntoslocal, puntosvisitante');
-
+  
       // Obtener nombres y puntos de los equipos
       var nombreLocal = equipos[0].textContent;
       var imagenLocal = `<img class="logito" src='../imagenes/otras/logosequipos/${nombreLocal}.png'>`;
       var nombreVisitante = equipos[1].textContent;
-      var puntosLocal = isNaN(parseInt(puntos[0].textContent)) ? 0 : parseInt(puntos[0].textContent);
-      var puntosVisitante = isNaN(parseInt(puntos[1].textContent)) ? 0 : parseInt(puntos[1].textContent);
-
-      // Actualizar partidos jugados para ambos equipos
-      actualizarContador(partidosJugados, nombreLocal);
-      actualizarContador(partidosJugados, nombreVisitante);
-
-      // Determinar el resultado del partido y actualizar victorias, derrotas, empates y puntosRecibidos
-      if (puntosLocal > puntosVisitante) {
-        actualizarContador(victorias, nombreLocal);
-        actualizarContador(derrotas, nombreVisitante);
-      } else if (puntosVisitante > puntosLocal) {
-        actualizarContador(victorias, nombreVisitante);
-        actualizarContador(derrotas, nombreLocal);
-      } else {
-        actualizarContador(empates, nombreLocal);
-        actualizarContador(empates, nombreVisitante);
+  
+      // Verificar si los puntos son números antes de convertirlos
+      var puntosLocal = isNaN(parseInt(puntos[0].textContent)) ? null : parseInt(puntos[0].textContent);
+      var puntosVisitante = isNaN(parseInt(puntos[1].textContent)) ? null : parseInt(puntos[1].textContent);
+  
+      // Verificar si ambos equipos tienen números en los puntos antes de actualizar los contadores
+      if (puntosLocal !== null && puntosVisitante !== null) {
+          // Resto del código sin cambios...
+  
+          // Actualizar partidos jugados para ambos equipos
+          actualizarContador(partidosJugados, nombreLocal);
+          actualizarContador(partidosJugados, nombreVisitante);
+  
+          // Determinar el resultado del partido y actualizar victorias, derrotas, empates y puntosRecibidos
+          if (puntosLocal > puntosVisitante) {
+              actualizarContador(victorias, nombreLocal);
+              actualizarContador(derrotas, nombreVisitante);
+          } else if (puntosVisitante > puntosLocal) {
+              actualizarContador(victorias, nombreVisitante);
+              actualizarContador(derrotas, nombreLocal);
+          } else {
+              actualizarContador(empates, nombreLocal);
+              actualizarContador(empates, nombreVisitante);
+          }
+  
+          // Actualizar puntos recibidos para el equipo local y visitante
+          actualizarPuntosRecibidos(puntosRecibidos, nombreLocal, puntosVisitante);
+          actualizarPuntosRecibidos(puntosRecibidos, nombreVisitante, puntosLocal);
       }
-
-      // Actualizar puntos recibidos para el equipo local y visitante
-      actualizarPuntosRecibidos(puntosRecibidos, nombreLocal, puntosVisitante);
-      actualizarPuntosRecibidos(puntosRecibidos, nombreVisitante, puntosLocal);
     });
   });
 
