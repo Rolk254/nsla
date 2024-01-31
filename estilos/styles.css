@@ -824,18 +824,8 @@ details[open] .toggle-summary .toggle-button {
 .jugador{ 
   padding:25px;
   background: linear-gradient(rgb(41, 136, 231), rgb(41, 37, 37));
+  box-shadow: black;
 }
-
-.cardinals-bg{
-  background-image:url(../imagenes/otras/OIG.jpg);
-}
-.cowboys-bg{
-  background-image:url(../imagenes/otras/cowfond.jpg);
-}
-.raiders-bg{
-  background-image:url(../imagenes/otras/raidersfond.jpg);
-}
-
 .fotoequipos {
   width: 100%;
   border-radius: 16px;
