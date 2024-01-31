@@ -824,7 +824,7 @@ details[open] .toggle-summary .toggle-button {
 .jugador{ 
   padding:25px;
   background: linear-gradient(rgb(41, 136, 231), rgb(41, 37, 37));
-  box-shadow: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 .fotoequipos {
   width: 100%;
