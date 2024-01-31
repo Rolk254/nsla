@@ -148,13 +148,14 @@ display: none;
 .tablaclasi th,td {
   padding: 5px;
 }
+
 }
 @media screen and (max-width: 550px) {
 label h3{
   margin-right: 5%;
 }
 .footer ul {
-  margin-right: 10%;
+  margin-right: 15%;
 }
 }
 
@@ -811,6 +812,7 @@ details[open] .toggle-summary .toggle-button {
   text-align: center;
 }
 
+/* Estilos para cada jugador de LB */
 .divjugadores> div {
   margin-bottom: 10px;
 }
@@ -818,17 +820,24 @@ details[open] .toggle-summary .toggle-button {
 /* Alinea el texto del nombre debajo de la imagen */
 .divjugadores p {
   margin-top: 5px;
-  margin: 0;
-  color: white;
 }
-.jugador{ 
-  padding:25px;
-  background: linear-gradient(rgb(41, 136, 231), rgb(41, 37, 37));
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+.cardinals-bg{
+  background-image:url(../imagenes/otras/OIG.jpg);
 }
+.cowboys-bg{
+  background-image:url(../imagenes/otras/cowfond.jpg);
+}
+.raiders-bg{
+  background-image:url(../imagenes/otras/raidersfond.jpg);
+}
+
 .fotoequipos {
   width: 100%;
-  border-radius: 16px;
+}
+
+.divjugadores p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
 }
 
 /*Estilos pagina noticias*/
@@ -886,10 +895,6 @@ details[open] .toggle-summary .toggle-button {
 .logito{
   width: 30px;
   height: 30px;
-}
-.escudo{
-  width: 80px;
-  height: 80px;
 }
 .boton {
   position: fixed;
