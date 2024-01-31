@@ -799,7 +799,7 @@ details[open] .toggle-summary .toggle-button {
   transition: transform 0.3s;
 }
 details[close] .toggle-summary .toggle-button {
-  transform: rotate(270deg);
+  transform: rotate(-90deg);
   transition: transform 0.3s;
 }
 
@@ -957,23 +957,11 @@ details[close] .toggle-summary .toggle-button {
 .textdecoration{
   text-decoration: none;
 }
-.alignleft{
-  text-align: left;
-}
 .divpartidos a{
   text-decoration: none;
 }
-.colorblue{
-  color: blue;
-}
 .marginleft{
   margin-left: 20%;
-}
-.lineheight{
-  line-height: 150%;
-}
-.uppercase{
-  text-transform: uppercase;
 }
 
 /* Menu de jornadas */
