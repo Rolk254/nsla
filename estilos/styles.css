@@ -798,6 +798,10 @@ details[open] .toggle-summary .toggle-button {
   transform: rotate(90deg);
   transition: transform 0.3s;
 }
+details[close] .toggle-summary .toggle-button {
+  transform: rotate(270deg);
+  transition: transform 0.3s;
+}
 
 .divequipos {
   width: 100%;
