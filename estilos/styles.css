@@ -823,7 +823,6 @@ details[open] .toggle-summary .toggle-button {
 }
 .jugador{ 
   padding:25px;
-  border-radius: 10px; 
   background: linear-gradient(rgb(41, 136, 231), rgb(41, 37, 37));
 }
 
