@@ -7,19 +7,19 @@
             <fecha>Miercoles, 5 de junio</fecha>
             <hora>20:15</hora>
             <equipos>
-                <local>Rams</local>
-                <puntoslocal>55</puntoslocal>
-                <visitante>Bengals</visitante>
-                <puntosvisitante>25</puntosvisitante>
+                <local>Cardinals</local>
+                <puntoslocal>25</puntoslocal>
+                <visitante>Cowboys</visitante>
+                <puntosvisitante>45</puntosvisitante>
             </equipos>
         </partido>
         <partido>
             <fecha>Jueves, 6 de junio</fecha>
             <hora>21:45</hora>
             <equipos>
-                <local>Cardinals</local>
-                <puntoslocal>45</puntoslocal>
-                <visitante>Raiders</visitante>
+                <local>Raiders</local>
+                <puntoslocal>20</puntoslocal>
+                <visitante>Steelers</visitante>
                 <puntosvisitante>35</puntosvisitante>
             </equipos>
         </partido>
@@ -27,10 +27,10 @@
             <fecha>Viernes, 7 de junio</fecha>
             <hora>23:30</hora>
             <equipos>
-                <local>Cowboys</local>
-                <puntoslocal>15</puntoslocal>
-                <visitante>Steelers</visitante>
-                <puntosvisitante>45</puntosvisitante>
+                <local>Bengals</local>
+                <puntoslocal>40</puntoslocal>
+                <visitante>Rams</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>
@@ -39,10 +39,10 @@
             <fecha>Viernes, 14 de junio</fecha>
             <hora>19:15</hora>
             <equipos>
-                <local>Bengals</local>
-                <puntoslocal>35</puntoslocal>
-                <visitante>Rams</visitante>
-                <puntosvisitante>20</puntosvisitante>
+                <local>Cardinals</local>
+                <puntoslocal>20</puntoslocal>
+                <visitante>Cowboys</visitante>
+                <puntosvisitante>25</puntosvisitante>
             </equipos>
         </partido>
         <partido>
@@ -50,19 +50,19 @@
             <hora>21:00</hora>
             <equipos>
                 <local>Raiders</local>
-                <puntoslocal>25</puntoslocal>
-                <visitante>Cardinals</visitante>
-                <puntosvisitante>30</puntosvisitante>
+                <puntoslocal>15</puntoslocal>
+                <visitante>Steelers</visitante>
+                <puntosvisitante>20</puntosvisitante>
             </equipos>
         </partido>
         <partido>
             <fecha>Domingo, 16 de junio</fecha>
             <hora>18:30</hora>
             <equipos>
-                <local>Steelers</local>
-                <puntoslocal>35</puntoslocal>
-                <visitante>Cowboys</visitante>
-                <puntosvisitante>40</puntosvisitante>
+                <local>Rams</local>
+                <puntoslocal>25</puntoslocal>
+                <visitante>Bengals</visitante>
+                <puntosvisitante>30</puntosvisitante>
             </equipos>
         </partido>
     </jornada>    
