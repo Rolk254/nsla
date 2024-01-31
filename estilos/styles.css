@@ -387,6 +387,9 @@ label h3{
 .sterai{
   background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 }
+.ramben{
+  background: linear-gradient(135deg,rgba(255,255,255,1) 0%,rgba(255,98,0,1) 100%);
+}
 
 .fechahora {
   border: 2px solid white;
