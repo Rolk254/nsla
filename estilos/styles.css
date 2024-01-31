@@ -833,6 +833,9 @@ details[open] .toggle-summary .toggle-button {
 }
 
 .fotoequipos {
+  width: 100%;
+}
+.escudo{
   width: 20px;
 }
 
