@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<xsl:variable name="temporadasDoc" select="document('temporadas.xml')"/>
+
   <xsl:template match="/">
     <html lang="es">
     <head>
@@ -34,15 +36,34 @@
                 <a href="../paginas/contacto.html">Contacto</a>
               </div>
         </header>
-        <div class="select" >
-            <select id="seleccionarPagina">
-              <option value="">Selecciona una Temporada</option>
-              <option value="calendar_t1.xml">TEMPORADA 1</option>
-              <option value="calendar_t2.xml">TEMPORADA 2</option>
-              <option value="calendar_t3.xml">TEMPORADA 3</option>
-            </select>
+        <div class="select">
+          <select id="seleccionarPagina" onchange="redirigirASegundaPagina()">
+            <option value="">Selecciona una Temporada</option>
+            <!-- Iterar sobre las temporadas cargadas desde temporadas.xml -->
+            <xsl:for-each select="$temporadasDoc//temp">
+              <option value="{.}.xml">
+                TEMPORADA <xsl:value-of select="."/>
+              </option>
+            </xsl:for-each>
+          </select>
         </div>
-        <button onclick="irAPaginaSeleccionada()">Ir a la Temporada Seleccionada</button>
+        <script type="text/javascript">
+          <![CDATA[
+            // Función que se ejecutará cuando se seleccione una temporada en el menú desplegable
+            function redirigirASegundaPagina() {
+              // Obtener el valor seleccionado
+              var seleccion = document.getElementById('seleccionarPagina');
+              var temporadaSeleccionada = seleccion.value;
+      
+              // Redirigir a la página correspondiente si se ha seleccionado una temporada
+              if (temporadaSeleccionada) {
+                window.location.href = temporadaSeleccionada;
+              } else {
+                console.error('Por favor, selecciona una temporada antes de continuar.');
+              }
+            }
+          ]]>
+        </script>
         <h1 class="titulin"><u>
           <xsl:value-of select="temporada/numtemp"/></u> 
           </h1>
