@@ -50,6 +50,8 @@
             var parser = new DOMParser();
             var xmlDoc = parser.parseFromString(data, 'application/xml');
     
+            var tituloTemporada = document.getElementById('tituloTemporada');
+            tituloTemporada.textContent = 'Temporada ' + temporadaSeleccionada.split('.')[0];
             // Llamar a la función para construir la tabla
             construirTabla(xmlDoc);
           })
