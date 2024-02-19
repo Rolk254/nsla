@@ -35,7 +35,7 @@
           <input type="checkbox" id="toggle"/>
           <div class="navbar">
             <a href="../index.html">Inicio</a>
-            <a href="calendar.xml">Calendario</a>
+            <a href="2023.xml">Calendario</a>
             <a id="active" href="clasi.xml">Clasificación</a>
             <a href="datos.xml">Equipos</a>
             <a href="../paginas/noticias.html">Noticias</a>
