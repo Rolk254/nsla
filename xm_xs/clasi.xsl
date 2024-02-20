@@ -116,7 +116,7 @@
         </xsl:choose>
         <img>
          <xsl:attribute name="src">
-            <xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/>
+            <a href="datos.xml"><xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/></a>
         </xsl:attribute>
           <xsl:attribute name="alt">Logo</xsl:attribute>
           <xsl:attribute name="width">30px</xsl:attribute>
