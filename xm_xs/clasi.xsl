@@ -114,13 +114,15 @@
             <xsl:attribute name="class">bears</xsl:attribute>
           </xsl:when>
         </xsl:choose>
-        <img>
-         <xsl:attribute name="src">
-            <a href="datos.xml"><xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/></a>
-        </xsl:attribute>
-          <xsl:attribute name="alt">Logo</xsl:attribute>
-          <xsl:attribute name="width">30px</xsl:attribute>
-        </img>
+        <a href="datos.xml">
+          <img>
+          <xsl:attribute name="src">
+            <xsl:value-of select="concat('../imagenes/otras/logosequipos/', translate(nombre, ' ', ''), '.png')"/>
+          </xsl:attribute>
+            <xsl:attribute name="alt">Logo</xsl:attribute>
+            <xsl:attribute name="width">30px</xsl:attribute>
+          </img>
+        </a>
         <xsl:value-of select="concat(' ', nombre)"/>
       </td>
       <td><xsl:value-of select="partidos_jugados"/></td>
