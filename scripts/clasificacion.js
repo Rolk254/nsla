@@ -130,7 +130,7 @@
 
       for (var equipo in partidosJugados) {
         var fila = document.createElement('tr');
-        var imagenLocal = `<a href="../xm_xs/datos.xml"><img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'></a>`;
+        var imagenLocal = `<a href="../xm_xs/datos.xml#${equipo}"><img class="logito" src='../imagenes/otras/logosequipos/${equipo}.png'></a>`;
         var claseEquipo = equipo.charAt(0).toLowerCase() + equipo.slice(1);
         var tdLogito = fila.insertCell(0);
         tdLogito.innerHTML = imagenLocal;

@@ -72,7 +72,7 @@
     <xsl:for-each select="equipo">
       <section>
         <div class="divequipos">
-          <details id="{nombre}">
+          <details id="{nombreequipo/nombre}">
             <summary class="toggle-summary">
               <p><xsl:value-of select="nombreequipo/nombre"/></p> 
               <span class="toggle-button">▶</span>
